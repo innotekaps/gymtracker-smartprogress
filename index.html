@@ -1,122 +1,717 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GymTracker – Privacy Policy</title>
+  <title>GymTracker – Legal</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.7; }
-    h1 { color: #1a1a1a; } h2 { color: #333; margin-top: 32px; } a { color: #007aff; }
-    footer { margin-top: 48px; font-size: 0.85em; color: #888; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif;
+      background: #f9f9fb;
+      color: #1c1c1e;
+      line-height: 1.7;
+    }
+    a { color: #007aff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: saturate(180%) blur(12px);
+      border-bottom: 1px solid #e5e5ea;
+      padding: 0 24px;
+    }
+    .nav-inner {
+      max-width: 860px; margin: 0 auto;
+      display: flex; align-items: center; gap: 4px;
+      overflow-x: auto; white-space: nowrap;
+    }
+    nav a {
+      display: inline-block;
+      padding: 14px 14px;
+      font-size: 14px; font-weight: 500;
+      color: #636366;
+      border-bottom: 2px solid transparent;
+    }
+    nav a:hover, nav a.active { color: #007aff; border-bottom-color: #007aff; }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #007aff 0%, #5ac8fa 100%);
+      padding: 56px 24px 40px;
+      text-align: center; color: white;
+    }
+    .hero h1 { font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
+    .hero p { font-size: 1rem; opacity: .85; }
+
+    /* MAIN */
+    main { max-width: 860px; margin: 0 auto; padding: 40px 24px 80px; }
+
+    /* SECTION CARDS */
+    .doc-section {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      margin-bottom: 48px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+      border: 1px solid #e5e5ea;
+    }
+    .doc-section h2 {
+      font-size: 1.5rem; font-weight: 700;
+      color: #007aff;
+      margin-bottom: 8px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #e5e5ea;
+    }
+    .doc-section .meta {
+      font-size: 0.82rem; color: #8e8e93;
+      margin-bottom: 24px;
+    }
+
+    h3 { font-size: 1.05rem; font-weight: 700; margin: 28px 0 8px; color: #1c1c1e; }
+    h4 { font-size: 0.95rem; font-weight: 700; margin: 20px 0 6px; color: #3a3a3c; }
+    p { margin-bottom: 12px; color: #3a3a3c; font-size: 0.95rem; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { color: #3a3a3c; font-size: 0.95rem; margin-bottom: 6px; }
+
+    .intro-text {
+      background: #f2f2f7;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 28px;
+      font-size: 0.93rem;
+      color: #3a3a3c;
+      border-left: 4px solid #007aff;
+    }
+    .info-box {
+      background: #f2f2f7;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 12px 0 16px;
+      border-left: 3px solid #007aff;
+    }
+    .info-box p { margin: 0; color: #3a3a3c; font-size: 0.93rem; line-height: 1.8; }
+    .warning-box {
+      background: #fff8e7;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 12px 0 16px;
+      border-left: 4px solid #f59e0b;
+    }
+    .warning-box strong { color: #92400e; display: block; margin-bottom: 4px; }
+    .warning-box p { color: #78350f; margin: 0; }
+    .highlight-box {
+      background: #f2f2f7;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 12px 0 16px;
+      border-left: 4px solid #f59e0b;
+    }
+    .highlight-box strong { color: #1c1c1e; display: block; margin-bottom: 4px; }
+    .highlight-box p { color: #3a3a3c; margin: 0; }
+
+    .tag {
+      display: inline-block;
+      background: rgba(0,122,255,.12);
+      color: #007aff;
+      font-size: 11px; font-weight: 700;
+      padding: 3px 10px; border-radius: 6px;
+      margin-right: 8px; white-space: nowrap;
+    }
+    .service-row {
+      display: flex; align-items: flex-start; gap: 10px;
+      margin-bottom: 14px;
+    }
+    .service-row p { margin: 0; }
+
+    .contact-box {
+      background: #f2f2f7;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-top: 28px;
+      text-align: center;
+      border: 1px solid #e5e5ea;
+    }
+    .contact-box strong { font-size: 1rem; display: block; margin-bottom: 6px; }
+    .contact-box p { margin: 2px 0; font-size: 0.9rem; color: #636366; }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #8e8e93;
+      padding: 32px 24px;
+      border-top: 1px solid #e5e5ea;
+    }
+
+    /* LANG TABS */
+    .lang-tabs { display: flex; gap: 8px; margin-bottom: 24px; }
+    .lang-tab {
+      padding: 6px 16px; border-radius: 20px;
+      font-size: 13px; font-weight: 600; cursor: pointer; border: none;
+      background: #e5e5ea; color: #636366;
+    }
+    .lang-tab.active { background: #007aff; color: white; }
+
+    .lang-it, .lang-en { display: none; }
+    .lang-it.visible, .lang-en.visible { display: block; }
+
+    @media (max-width: 600px) {
+      .doc-section { padding: 24px 18px; }
+      .hero h1 { font-size: 1.5rem; }
+    }
   </style>
 </head>
 <body>
 
-<h1>Privacy Policy – GymTracker</h1>
-<p><strong>Last updated:</strong> April 3, 2026</p>
-<p>GymTracker ("we", "our", "the app") is developed by <strong>INNOVET</strong> (innovetservizi@gmail.com). This Privacy Policy explains how we collect, use, and protect your data when you use the GymTracker mobile application.</p>
+<nav>
+  <div class="nav-inner">
+    <a href="#privacy" class="active">🔒 Privacy Policy</a>
+    <a href="#terms">📋 Terms of Service</a>
+    <a href="#cookie">🍪 Tracking &amp; Storage</a>
+  </div>
+</nav>
 
-<h2>1. Information We Collect</h2>
-<h3>Account Data</h3>
-<p>When you sign in with Google or create an account, we collect your name, email address, and profile picture to identify your account and sync your data across devices.</p>
+<div class="hero">
+  <h1>GymTracker – Legal</h1>
+  <p>Innotek · App Store ID: 6759553013</p>
+</div>
 
-<h3>Fitness &amp; Health Data (HealthKit)</h3>
-<p>With your explicit permission, GymTracker reads and writes the following data from/to Apple Health:</p>
-<ul>
-  <li>Workout sessions (type, duration, calories burned)</li>
-  <li>Heart rate measurements</li>
-  <li>Body weight</li>
-  <li>Active energy burned</li>
-</ul>
-<p>This data is used solely to display your fitness statistics and calculate performance metrics within the app. Health data is never shared with third parties or used for advertising purposes.</p>
+<main>
 
-<h3>Motion &amp; Activity Data</h3>
-<p>GymTracker may access motion sensors to detect physical activity during workouts. This data is processed on-device and is not transmitted to our servers.</p>
+  <!-- ==================== PRIVACY POLICY ==================== -->
+  <div class="doc-section" id="privacy">
+    <h2>🔒 Privacy Policy</h2>
+    <p class="meta">Ultimo aggiornamento / Last updated: 5 marzo 2026 · Versione 1.1</p>
 
-<h3>Workout &amp; Training Data</h3>
-<p>We store your training schedules, exercise logs, personal records, and progress history in our secure cloud database (Firebase / Firestore) to enable cross-device sync and backup.</p>
+    <div class="lang-tabs">
+      <button class="lang-tab active" onclick="setLang('privacy','it',this)">🇮🇹 Italiano</button>
+      <button class="lang-tab" onclick="setLang('privacy','en',this)">🇬🇧 English</button>
+    </div>
 
-<h2>2. How We Use Your Data</h2>
-<ul>
-  <li>To provide, personalise, and improve the GymTracker experience</li>
-  <li>To sync your workouts and progress across your devices</li>
-  <li>To calculate fitness statistics and performance trends</li>
-  <li>To send optional workout reminders (only if you enable notifications)</li>
-</ul>
+    <!-- ITALIANO -->
+    <div class="lang-it visible" id="privacy-it">
+      <div class="intro-text">
+        La presente Informativa sulla Privacy descrive come GymTracker (di seguito "l'App"), sviluppata da <strong>Innotek</strong>, raccoglie, utilizza, conserva e protegge i dati personali degli utenti in conformità al Regolamento (UE) 2016/679 (GDPR), al D.Lgs. 196/2003 e successive modifiche, nonché alle linee guida Apple App Store sulla privacy delle applicazioni.
+      </div>
 
-<h2>3. Data Storage &amp; Security</h2>
-<p>Your data is stored securely using <strong>Google Firebase</strong> (Firestore and Authentication), which complies with industry-standard security practices. All data is encrypted in transit (TLS) and at rest. We do not sell your personal data to third parties.</p>
+      <h3>1. Titolare del Trattamento</h3>
+      <p>Il Titolare del trattamento dei dati personali è:</p>
+      <div class="info-box">
+        <p><strong>Innotek</strong><br />
+        Email: <a href="mailto:privacy@gymtracker.app">privacy@gymtracker.app</a><br />
+        App Store ID: 6759553013</p>
+      </div>
+      <p>Per qualsiasi richiesta relativa al trattamento dei tuoi dati personali, puoi contattarci all'indirizzo email indicato sopra.</p>
 
-<h2>4. Third-Party Services</h2>
-<ul>
-  <li><strong>Google Firebase</strong> – authentication, cloud database: <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a></li>
-  <li><strong>Google Sign-In</strong> – social login: <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
-  <li><strong>Apple HealthKit</strong> – health data integration (data stays on-device / iCloud)</li>
-</ul>
+      <h3>2. Dati Raccolti</h3>
+      <p>GymTracker raccoglie esclusivamente i dati necessari al corretto funzionamento dell'applicazione e all'erogazione dei servizi richiesti dall'utente.</p>
+      <h4>2.1 Dati forniti direttamente dall'utente</h4>
+      <ul>
+        <li>Nome e indirizzo email (forniti al momento della registrazione o dell'accesso con Google/Apple)</li>
+        <li>Dati personali inseriti nell'onboarding: età, genere, peso corporeo, altezza, obiettivi di fitness</li>
+        <li>Dati di allenamento: programmi, schede, serie, ripetizioni, carichi, tempi di recupero</li>
+        <li>Misurazioni del peso corporeo registrate nel tempo</li>
+        <li>Foto del profilo (opzionale)</li>
+      </ul>
+      <h4>2.2 Dati raccolti automaticamente</h4>
+      <ul>
+        <li>Identificativo univoco del dispositivo (per la gestione della sessione e degli acquisti in-app)</li>
+        <li>Versione del sistema operativo e del dispositivo (per ottimizzare la compatibilità)</li>
+        <li>Log degli errori tecnici (in forma anonima, per il miglioramento della stabilità)</li>
+        <li>Dati di utilizzo aggregati e anonimi (frequenza di accesso, funzionalità utilizzate)</li>
+      </ul>
+      <h4>2.3 Dati sanitari (Apple Health / HealthKit)</h4>
+      <p>Con il tuo esplicito consenso, GymTracker può accedere e scrivere su Apple HealthKit i seguenti dati:</p>
+      <ul>
+        <li>Frequenza cardiaca (lettura durante e dopo l'allenamento per il calcolo delle calorie)</li>
+        <li>Calorie attive bruciate (scrittura al termine di ogni sessione completata)</li>
+        <li>Peso corporeo (lettura e scrittura sincronizzata con il log peso dell'app)</li>
+        <li>Allenamenti di forza (scrittura al completamento di ogni sessione)</li>
+      </ul>
+      <p>Questi dati sanitari rimangono sul dispositivo e su HealthKit. Non vengono mai trasmessi ai nostri server né a terze parti. L'accesso a HealthKit è sempre revocabile dalle Impostazioni di iOS.</p>
 
-<h2>5. Data Retention &amp; Deletion</h2>
-<p>You can delete your account and all associated data at any time from the app settings (Settings → Account → Delete Account). Upon deletion, all your personal data and workout history will be permanently removed from our servers within 30 days.</p>
+      <h3>3. Finalità e Base Giuridica del Trattamento</h3>
+      <ul>
+        <li><strong>Fornitura del servizio</strong>: gestione account, sincronizzazione cloud, backup e ripristino (art. 6, par. 1, lett. b GDPR)</li>
+        <li><strong>Autenticazione</strong>: verifica identità tramite Firebase Auth, Google Sign-In e Apple Sign In (art. 6, par. 1, lett. b GDPR)</li>
+        <li><strong>Abbonamenti e acquisti</strong>: gestione GymTracker Pro tramite RevenueCat e store Apple (art. 6, par. 1, lett. b GDPR)</li>
+        <li><strong>Miglioramento dell'App</strong>: analisi aggregata anonima (art. 6, par. 1, lett. f GDPR – legittimo interesse)</li>
+        <li><strong>Obblighi legali</strong>: conservazione dati contabili acquisti (art. 6, par. 1, lett. c GDPR)</li>
+      </ul>
 
-<h2>6. Children's Privacy</h2>
-<p>GymTracker is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
+      <h3>4. Condivisione dei Dati con Terze Parti</h3>
+      <p>GymTracker non vende, non affitta e non cede i tuoi dati personali a terze parti per finalità di marketing. I dati sono condivisi esclusivamente con i seguenti fornitori tecnici:</p>
+      <h4>Google Firebase (Alphabet Inc.)</h4>
+      <p>Autenticazione (Firebase Auth), database cloud (Firestore), backup immagini (Cloud Storage) ed elaborazione dei programmi di allenamento (Cloud Functions + Gemini AI). I dati sono trattati su server EU (region europe-west1). <a href="https://firebase.google.com/support/privacy" target="_blank">Privacy Policy Firebase →</a></p>
+      <h4>RevenueCat Inc.</h4>
+      <p>Gestione verifica e monitoraggio abbonamenti in-app. RevenueCat riceve un identificativo anonimo e i dati di acquisto necessari alla verifica. Non ha accesso a dati di allenamento o sanitari. <a href="https://www.revenuecat.com/privacy" target="_blank">Privacy Policy RevenueCat →</a></p>
 
-<h2>7. Your Rights</h2>
-<p>Depending on your location, you may have rights to access, correct, or delete your personal data. To exercise these rights, contact us at <a href="mailto:innovetservizi@gmail.com">innovetservizi@gmail.com</a>.</p>
+      <h3>5. Conservazione dei Dati</h3>
+      <ul>
+        <li>Dati di allenamento e account: conservati fino alla cancellazione manuale o per max 2 anni dall'ultimo accesso</li>
+        <li>Log tecnici anonimi: massimo 90 giorni</li>
+        <li>Dati contabili relativi agli acquisti: 10 anni (normativa fiscale italiana)</li>
+      </ul>
+      <p>Al momento della cancellazione dell'account, tutti i dati personali vengono eliminati definitivamente dai nostri server entro 30 giorni, inclusi dati su Firestore, Cloud Storage e log associati al tuo account.</p>
 
-<h2>8. Changes to This Policy</h2>
-<p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date. Continued use of the app after changes constitutes acceptance of the new policy.</p>
+      <h3>6. I Tuoi Diritti (GDPR)</h3>
+      <p>In qualità di utente nell'Area Economica Europea, hai il diritto di:</p>
+      <ul>
+        <li><strong>Accesso</strong>: ottenere copia dei tuoi dati personali</li>
+        <li><strong>Rettifica</strong>: correggere dati inesatti o incompleti</li>
+        <li><strong>Cancellazione</strong> ("diritto all'oblio"): richiedere l'eliminazione di tutti i tuoi dati</li>
+        <li><strong>Limitazione</strong>: richiedere la sospensione temporanea del trattamento</li>
+        <li><strong>Portabilità</strong>: ricevere i tuoi dati in formato strutturato e leggibile</li>
+        <li><strong>Opposizione</strong>: opporti al trattamento basato su legittimo interesse</li>
+        <li><strong>Revoca del consenso</strong>: revocare in qualsiasi momento il consenso prestato</li>
+      </ul>
+      <p>Per esercitare i tuoi diritti, usa la funzione "Elimina Account" nelle Impostazioni dell'App oppure contattaci a <a href="mailto:privacy@gymtracker.app">privacy@gymtracker.app</a>. Risponderemo entro 30 giorni.</p>
 
-<h2>9. Contact</h2>
-<p>If you have any questions about this Privacy Policy, please contact us:<br />
-📧 <a href="mailto:innovetservizi@gmail.com">innovetservizi@gmail.com</a></p>
+      <h3>7. Sicurezza dei Dati</h3>
+      <ul>
+        <li>Trasmissione cifrata con TLS 1.3</li>
+        <li>Autenticazione con token sicuri (Firebase ID Token, JWT)</li>
+        <li>Regole di sicurezza Firestore con isolamento totale tra account</li>
+        <li>Archiviazione locale protetta tramite iOS Keychain e AsyncStorage cifrato</li>
+        <li>Accesso ai sistemi backend limitato al personale autorizzato</li>
+      </ul>
 
-<hr />
+      <h3>8. Trasferimenti Internazionali di Dati</h3>
+      <p>I dati trattati da Google Firebase sono principalmente elaborati all'interno dell'UE (server europe-west1). Eventuali trasferimenti verso paesi terzi avvengono nel rispetto del GDPR, incluse le Clausole Contrattuali Standard (SCC) approvate dalla Commissione Europea.</p>
 
-<h1 lang="it">Informativa sulla Privacy – GymTracker</h1>
-<p><strong>Ultimo aggiornamento:</strong> 3 aprile 2026</p>
-<p>GymTracker è sviluppata da <strong>INNOVET</strong> (innovetservizi@gmail.com). Questa informativa spiega come raccogliamo, utilizziamo e proteggiamo i tuoi dati.</p>
+      <h3>9. Minori</h3>
+      <p>GymTracker non è destinata a minori di 16 anni. Non raccogliamo consapevolmente dati di utenti sotto i 16 anni. Se ritieni che un minore abbia utilizzato l'App, contattaci immediatamente a <a href="mailto:privacy@gymtracker.app">privacy@gymtracker.app</a> per la cancellazione immediata.</p>
 
-<h2>1. Dati raccolti</h2>
-<h3>Dati account</h3>
-<p>Accedendo con Google raccogliamo nome, email e foto profilo per identificare il tuo account e sincronizzare i dati tra i dispositivi.</p>
+      <h3>10. Modifiche a questa Informativa</h3>
+      <p>Potremmo aggiornare periodicamente la presente Informativa per riflettere modifiche legislative, tecnologiche o nei servizi offerti. In caso di modifiche sostanziali, ti notificheremo tramite notifica in-app o email.</p>
 
-<h3>Dati sanitari (HealthKit)</h3>
-<p>Con il tuo esplicito consenso, GymTracker legge e scrive su Apple Salute:</p>
-<ul>
-  <li>Sessioni di allenamento (tipo, durata, calorie)</li>
-  <li>Frequenza cardiaca</li>
-  <li>Peso corporeo</li>
-  <li>Energia attiva bruciata</li>
-</ul>
-<p>Questi dati vengono usati esclusivamente per mostrare statistiche e calcolare le performance. Non vengono condivisi con terze parti né usati per pubblicità.</p>
+      <div class="contact-box">
+        <strong>Contatti Privacy</strong>
+        <p><a href="mailto:privacy@gymtracker.app">privacy@gymtracker.app</a></p>
+        <p>Innotek — GymTracker</p>
+      </div>
+    </div>
 
-<h3>Dati di movimento</h3>
-<p>GymTracker può accedere ai sensori di movimento per rilevare l'attività fisica. Questi dati sono elaborati sul dispositivo e non trasmessi ai nostri server.</p>
+    <!-- ENGLISH -->
+    <div class="lang-en" id="privacy-en">
+      <div class="intro-text">
+        This Privacy Policy explains how GymTracker (the "App"), developed by <strong>Innotek</strong>, collects, uses, stores, and protects personal data in compliance with the GDPR and applicable privacy laws.
+      </div>
 
-<h3>Allenamenti e progressi</h3>
-<p>Le tue schede, i log degli esercizi e i record personali vengono salvati sul nostro database sicuro (Firebase / Firestore) per la sincronizzazione e il backup.</p>
+      <h3>1. Data Controller</h3>
+      <div class="info-box">
+        <p><strong>Innotek</strong><br />
+        Email: <a href="mailto:privacy@gymtracker.app">privacy@gymtracker.app</a><br />
+        App Store ID: 6759553013</p>
+      </div>
+      <p>For any request about personal data processing, contact us at the email above.</p>
 
-<h2>2. Come usiamo i tuoi dati</h2>
-<ul>
-  <li>Per fornire e migliorare l'esperienza GymTracker</li>
-  <li>Per sincronizzare i tuoi allenamenti tra dispositivi</li>
-  <li>Per calcolare statistiche e progressi</li>
-  <li>Per inviare promemoria (solo se abiliti le notifiche)</li>
-</ul>
+      <h3>2. Data We Collect</h3>
+      <p>GymTracker only collects data required to provide the service.</p>
+      <h4>2.1 Data provided by you</h4>
+      <ul>
+        <li>Name and email address (registration or Google/Apple sign-in)</li>
+        <li>Onboarding profile data (age, gender, weight, height, goals)</li>
+        <li>Workout data (plans, sets, reps, loads, rest times)</li>
+        <li>Body weight entries</li>
+        <li>Profile photo (optional)</li>
+      </ul>
+      <h4>2.2 Automatically collected data</h4>
+      <ul>
+        <li>Device/session identifiers for authentication and subscriptions</li>
+        <li>Device and OS version for compatibility</li>
+        <li>Anonymous technical error logs</li>
+        <li>Aggregated usage analytics</li>
+      </ul>
+      <h4>2.3 Health data (Apple Health / HealthKit)</h4>
+      <p>With your explicit consent, the App can read/write selected HealthKit data:</p>
+      <ul>
+        <li>Heart rate (read during/after workouts for calorie calculation)</li>
+        <li>Active calories burned (written after each completed session)</li>
+        <li>Body weight (synced with the app's weight log)</li>
+        <li>Strength workouts (written on session completion)</li>
+      </ul>
+      <p>Health data remains on your device and in HealthKit. It is never transmitted to our servers or sold to third parties. HealthKit access can be revoked at any time from iOS Settings.</p>
 
-<h2>3. Conservazione ed eliminazione</h2>
-<p>Puoi eliminare il tuo account e tutti i dati associati dalle impostazioni dell'app (Impostazioni → Account → Elimina account). I dati verranno rimossi definitivamente entro 30 giorni.</p>
+      <h3>3. Purpose and Legal Basis</h3>
+      <ul>
+        <li><strong>Service delivery</strong> (account, sync, backup): contract performance</li>
+        <li><strong>Authentication</strong> (Firebase, Google, Apple): contract performance</li>
+        <li><strong>Subscriptions</strong> (RevenueCat + Apple Store): contract performance</li>
+        <li><strong>Product improvements</strong> (aggregated analytics): legitimate interest</li>
+        <li><strong>Legal compliance</strong> (purchase/accounting data): legal obligation</li>
+      </ul>
 
-<h2>4. Servizi di terze parti</h2>
-<ul>
-  <li><strong>Google Firebase</strong> – autenticazione e database cloud</li>
-  <li><strong>Google Sign-In</strong> – accesso social</li>
-  <li><strong>Apple HealthKit</strong> – integrazione dati salute</li>
-</ul>
+      <h3>4. Third-Party Processors</h3>
+      <p>GymTracker does not sell personal data. We share only what is necessary with technical providers:</p>
+      <h4>Google Firebase</h4>
+      <p>Authentication, cloud database/storage, cloud functions, and AI-based workout plan analysis. Data processed in the EU (europe-west1). <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy →</a></p>
+      <h4>RevenueCat</h4>
+      <p>Subscription validation and entitlement management. No access to workout or health data. <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy →</a></p>
 
-<h2>5. Contatti</h2>
-<p>📧 <a href="mailto:innovetservizi@gmail.com">innovetservizi@gmail.com</a></p>
+      <h3>5. Data Retention</h3>
+      <ul>
+        <li>Workout/account data: until account deletion or max 2 years from last access</li>
+        <li>Anonymous technical logs: max 90 days</li>
+        <li>Purchase/accounting data: per legal requirements (10 years under Italian law)</li>
+      </ul>
+      <p>After account deletion, personal data is removed from active systems within 30 days.</p>
 
-<footer>© 2026 INNOVET – GymTracker</footer>
+      <h3>6. Your GDPR Rights</h3>
+      <ul>
+        <li><strong>Access</strong>: obtain a copy of your personal data</li>
+        <li><strong>Rectification</strong>: correct inaccurate or incomplete data</li>
+        <li><strong>Erasure</strong>: request deletion of all your personal data</li>
+        <li><strong>Restriction</strong>: request temporary suspension of processing</li>
+        <li><strong>Portability</strong>: receive your data in a machine-readable format</li>
+        <li><strong>Objection</strong>: object to processing based on legitimate interest</li>
+        <li><strong>Withdraw consent</strong>: at any time without affecting prior processing</li>
+      </ul>
+      <p>To exercise your rights, use in-app account deletion or contact <a href="mailto:privacy@gymtracker.app">privacy@gymtracker.app</a>. We will respond within 30 days.</p>
+
+      <h3>7. Security</h3>
+      <ul>
+        <li>Encrypted transport (TLS 1.3)</li>
+        <li>Secure authentication tokens (Firebase ID Token, JWT)</li>
+        <li>Firestore security rules with per-user isolation</li>
+        <li>Protected local storage via iOS Keychain</li>
+        <li>Backend access restricted to authorised personnel</li>
+      </ul>
+
+      <h3>8. International Transfers</h3>
+      <p>Firebase data is primarily processed within the EU (europe-west1). Any international transfers rely on lawful safeguards such as Standard Contractual Clauses approved by the European Commission.</p>
+
+      <h3>9. Minors</h3>
+      <p>GymTracker is not intended for users under 16. If you believe a minor has provided data, contact us immediately at <a href="mailto:privacy@gymtracker.app">privacy@gymtracker.app</a> for removal.</p>
+
+      <h3>10. Policy Changes</h3>
+      <p>We may update this policy to reflect legal, technical, or product changes. Material changes will be communicated in-app or by email.</p>
+
+      <div class="contact-box">
+        <strong>Privacy Contacts</strong>
+        <p><a href="mailto:privacy@gymtracker.app">privacy@gymtracker.app</a></p>
+        <p>Innotek — GymTracker</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== TERMS OF SERVICE ==================== -->
+  <div class="doc-section" id="terms">
+    <h2>📋 Terms of Service</h2>
+    <p class="meta">Ultimo aggiornamento / Last updated: 5 marzo 2026 · Versione 1.1</p>
+
+    <div class="lang-tabs">
+      <button class="lang-tab active" onclick="setLang('terms','it',this)">🇮🇹 Italiano</button>
+      <button class="lang-tab" onclick="setLang('terms','en',this)">🇬🇧 English</button>
+    </div>
+
+    <div class="lang-it visible" id="terms-it">
+      <div class="intro-text">
+        I presenti Termini di Servizio ("Termini") regolano l'utilizzo dell'app GymTracker ("App"), sviluppata da <strong>Innotek</strong>. Utilizzando l'App accetti integralmente i presenti Termini. Se non sei d'accordo, non utilizzare l'App.
+      </div>
+
+      <h3>1. Descrizione del Servizio</h3>
+      <p>GymTracker è un'app iOS per la gestione degli allenamenti con programmi personalizzati, tracciamento sessioni, statistiche e sincronizzazione opzionale con Apple Health.</p>
+      <ul>
+        <li>Pianificazione e gestione schede di allenamento</li>
+        <li>Storico allenamenti con statistiche e grafici</li>
+        <li>Import programmi da PDF, immagini e testo</li>
+        <li>Funzionalità avanzate disponibili con GymTracker Pro</li>
+      </ul>
+
+      <h3>2. Idoneità</h3>
+      <ul>
+        <li>Devi rispettare i requisiti di età previsti dalla normativa locale</li>
+        <li>Devi avere capacità legale per accettare questi Termini</li>
+        <li>Non devi essere sospeso dall'utilizzo dei nostri servizi</li>
+      </ul>
+
+      <h3>3. Account e Accesso</h3>
+      <p>Per funzionalità cloud e backup può essere richiesto un account (Google, Apple o email/password). Sei responsabile della sicurezza del tuo account e delle attività effettuate con le tue credenziali.</p>
+
+      <h3>4. Abbonamenti e Pagamenti</h3>
+      <p>Gli abbonamenti GymTracker Pro sono gestiti tramite Apple In-App Purchases e possono rinnovarsi automaticamente salvo disdetta dalle impostazioni di abbonamento Apple.</p>
+      <div class="highlight-box">
+        <strong>Trial gratuito</strong>
+        <p>Se previsto, il trial si converte in abbonamento a pagamento salvo disdetta prima del rinnovo.</p>
+      </div>
+
+      <h3>5. Avvertenza Medica</h3>
+      <div class="warning-box">
+        <strong>⚠️ Avviso Importante</strong>
+        <p>GymTracker non è un dispositivo medico e non fornisce diagnosi o prescrizioni mediche.</p>
+      </div>
+      <p>Consulta sempre un professionista qualificato prima di iniziare nuovi programmi di allenamento.</p>
+
+      <h3>6. Proprietà Intellettuale</h3>
+      <p>L'App e i relativi contenuti sono di proprietà di Innotek o dei rispettivi licenzianti. È vietato copiare, decompilare o riutilizzare i contenuti per scopi commerciali senza autorizzazione.</p>
+
+      <h3>7. Dati e Contenuti Utente</h3>
+      <p>Mantieni la proprietà dei tuoi dati di allenamento. Tali dati sono trattati solo per erogare funzionalità dell'App come sync, backup e ripristino.</p>
+
+      <h3>8. Limitazione di Responsabilità</h3>
+      <p>Nei limiti consentiti dalla legge, Innotek non risponde per danni indiretti, indisponibilità temporanee del servizio o decisioni prese dall'utente sulla base dei dati dell'App.</p>
+
+      <h3>9. Modifiche al Servizio</h3>
+      <p>Possiamo aggiornare o modificare funzionalità dell'App nel tempo. Le modifiche sostanziali saranno comunicate tramite canali appropriati.</p>
+
+      <h3>10. Legge Applicabile</h3>
+      <p>I presenti Termini sono regolati dalla legge applicabile, senza pregiudicare i diritti inderogabili del consumatore.</p>
+
+      <h3>11. Disposizioni Finali</h3>
+      <p>Se una clausola è ritenuta non valida, le restanti clausole restano pienamente efficaci.</p>
+
+      <h3>12. Contatti</h3>
+      <div class="contact-box">
+        <strong>Assistenza GymTracker</strong>
+        <p>📧 <a href="mailto:support@gymtracker.app">support@gymtracker.app</a></p>
+        <p>🔒 <a href="mailto:privacy@gymtracker.app">privacy@gymtracker.app</a> (questioni privacy)</p>
+        <p>Innotek · App Store ID: 6759553013</p>
+      </div>
+    </div>
+
+    <div class="lang-en" id="terms-en">
+      <div class="intro-text">
+        These Terms of Service ("Terms") govern your use of the GymTracker app ("App"), developed by <strong>Innotek</strong>. By using the App, you accept these Terms. If you do not agree, do not use the App.
+      </div>
+
+      <h3>1. Service Description</h3>
+      <p>GymTracker is an iOS fitness app for workout planning, session tracking, historical analytics, and optional Apple Health integration.</p>
+      <ul>
+        <li>Workout program planning and management</li>
+        <li>Workout history with charts and detailed stats</li>
+        <li>Import plans from PDF, images, and text</li>
+        <li>Advanced features available with GymTracker Pro</li>
+      </ul>
+
+      <h3>2. Eligibility</h3>
+      <ul>
+        <li>You must satisfy legal age requirements in your jurisdiction</li>
+        <li>You must have legal capacity to accept these Terms</li>
+        <li>You must not be suspended from our services</li>
+      </ul>
+
+      <h3>3. Accounts and Access</h3>
+      <p>Cloud and backup features may require an account (Google, Apple, or email/password). You are responsible for the security of your account credentials and related activity.</p>
+
+      <h3>4. Subscriptions and Billing</h3>
+      <p>GymTracker Pro subscriptions are billed via Apple In-App Purchases and may auto-renew unless canceled in Apple subscription settings.</p>
+      <div class="highlight-box">
+        <strong>Free trial</strong>
+        <p>If available, free trials convert into paid subscriptions unless canceled before renewal.</p>
+      </div>
+
+      <h3>5. Medical Disclaimer</h3>
+      <div class="warning-box">
+        <strong>⚠️ Important Notice</strong>
+        <p>GymTracker is not a medical device and does not provide medical diagnosis or treatment advice.</p>
+      </div>
+      <p>Always consult a qualified professional before starting a new training program.</p>
+
+      <h3>6. Intellectual Property</h3>
+      <p>The App and related content are owned by Innotek or its licensors. Copying, decompiling, or commercial reuse without authorization is prohibited.</p>
+
+      <h3>7. User Data and Content</h3>
+      <p>You retain ownership of your workout data. Data is processed only to provide app functionality such as sync, backup, and restore.</p>
+
+      <h3>8. Limitation of Liability</h3>
+      <p>To the extent permitted by law, Innotek is not liable for indirect damages, temporary service downtime, or user decisions based on app data.</p>
+
+      <h3>9. Service Changes</h3>
+      <p>We may update or modify app features over time. Material changes will be communicated through appropriate channels.</p>
+
+      <h3>10. Governing Law</h3>
+      <p>These Terms are governed by applicable law, without limiting mandatory consumer protection rights.</p>
+
+      <h3>11. Final Provisions</h3>
+      <p>If any provision is unenforceable, the remaining provisions remain in effect.</p>
+
+      <h3>12. Contacts</h3>
+      <div class="contact-box">
+        <strong>GymTracker Support</strong>
+        <p>📧 <a href="mailto:support@gymtracker.app">support@gymtracker.app</a></p>
+        <p>🔒 <a href="mailto:privacy@gymtracker.app">privacy@gymtracker.app</a> (privacy requests)</p>
+        <p>Innotek · App Store ID: 6759553013</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== COOKIE / TRACKING ==================== -->
+  <div class="doc-section" id="cookie">
+    <h2>🍪 Tracking &amp; Storage Technologies</h2>
+    <p class="meta">Ultimo aggiornamento / Last updated: 5 marzo 2026 · Versione 1.1</p>
+
+    <div class="lang-tabs">
+      <button class="lang-tab active" onclick="setLang('cookie','it',this)">🇮🇹 Italiano</button>
+      <button class="lang-tab" onclick="setLang('cookie','en',this)">🇬🇧 English</button>
+    </div>
+
+    <div class="lang-it visible" id="cookie-it">
+      <div class="intro-text">
+        GymTracker è un'applicazione mobile nativa per iOS. A differenza dei siti web, le app mobili non utilizzano i cookie nel senso tradizionale. Tuttavia, impieghiamo tecnologie equivalenti per garantire il funzionamento dell'App, memorizzare le tue preferenze e misurare le performance dei servizi offerti.
+      </div>
+
+      <h3>1. Archiviazione Locale sul Dispositivo</h3>
+      <p>GymTracker utilizza l'archiviazione locale per garantire un'esperienza fluida, rapida e funzionante anche offline. Nessuno di questi dati viene trasmesso a terze parti senza il tuo consenso.</p>
+
+      <h4>AsyncStorage (Archiviazione persistente)</h4>
+      <p>Utilizziamo AsyncStorage per conservare localmente:</p>
+      <ul>
+        <li>Dati di sessione dell'utente autenticato (token di accesso, profilo utente)</li>
+        <li>Preferenze dell'App: tema scuro/chiaro, lingua, unità di misura (kg/lbs), preferenze notifica</li>
+        <li>Stato dell'onboarding e completamento della configurazione iniziale</li>
+        <li>Cache locale dei dati di allenamento per l'accesso offline</li>
+        <li>Impostazioni di integrazione con Apple Health e Apple Watch</li>
+      </ul>
+      <p>Questi dati sono accessibili esclusivamente dall'App GymTracker e non sono condivisi con altre applicazioni.</p>
+
+      <h4>Keychain iOS (Archiviazione sicura)</h4>
+      <p>Per i dati sensibili legati all'autenticazione, utilizziamo il Keychain di iOS con cifratura hardware:</p>
+      <ul>
+        <li>Token di autenticazione Firebase (ID Token, Refresh Token)</li>
+        <li>Credenziali Google OAuth</li>
+        <li>Dati dell'identità Apple Sign In</li>
+      </ul>
+
+      <h3>2. Tecnologie di Tracciamento Tecnico</h3>
+      <p>Le seguenti tecnologie sono strettamente necessarie al funzionamento dell'App e non richiedono consenso in quanto hanno natura puramente tecnica:</p>
+
+      <h4>Identificatori di sessione Firebase</h4>
+      <p>Firebase Authentication utilizza token JWT a breve scadenza per gestire la sessione utente. Questi token contengono l'UID dell'utente e la data di scadenza, e vengono rinnovati automaticamente senza richiedere un nuovo accesso.</p>
+
+      <h4>Identificatori di abbonamento RevenueCat</h4>
+      <p>RevenueCat utilizza un identificativo anonimo (App User ID) per associare il piano di abbonamento al tuo account, senza raccogliere dati personali aggiuntivi.</p>
+
+      <h4>Identificatori dispositivo (IDFV)</h4>
+      <p>L'App può utilizzare l'Identifier for Vendor (IDFV) fornito da iOS — un identificativo anonimo specifico per il vendor (Innotek) su quel dispositivo. L'IDFV viene reimpostato alla disinstallazione dell'App.</p>
+
+      <h3>3. Tecnologie dei Servizi Terzi</h3>
+      <div class="service-row">
+        <span class="tag">Firebase / Google</span>
+        <p>Analytics (solo aggregato), autenticazione, database, archiviazione file, funzioni cloud</p>
+      </div>
+      <div class="service-row">
+        <span class="tag">RevenueCat</span>
+        <p>Verifica e gestione abbonamenti, analisi revenue (dati aggregati anonimi)</p>
+      </div>
+      <div class="service-row">
+        <span class="tag">Apple HealthKit</span>
+        <p>Sincronizzazione dati sanitari (locale, solo su consenso esplicito)</p>
+      </div>
+
+      <h3>4. Durata della Conservazione</h3>
+      <ul>
+        <li>Token di sessione: rinnovati automaticamente fino al logout o cancellazione account</li>
+        <li>Preferenze e impostazioni: conservate fino alla disinstallazione o cancellazione account</li>
+        <li>Cache offline dei dati di allenamento: aggiornata ad ogni sync, eliminata con cancellazione account</li>
+        <li>Dati di sessione Keychain: eliminati al logout e alla cancellazione account</li>
+      </ul>
+      <p>La disinstallazione dell'App elimina tutti i dati salvati nell'archiviazione locale (AsyncStorage). I dati sincronizzati sul cloud (Firestore) rimangono disponibili fino alla cancellazione esplicita dell'account.</p>
+
+      <h3>5. Come Gestire e Cancellare i Dati Locali</h3>
+      <ul>
+        <li><strong>Logout dall'App</strong>: elimina i token di sessione dal Keychain e reimposta la cache di autenticazione</li>
+        <li><strong>Cancella Account</strong> (Impostazioni → Profilo → Elimina Account): elimina definitivamente tutti i dati locali e cloud</li>
+        <li><strong>Disinstallazione dell'App</strong>: rimuove tutti i dati locali salvati su AsyncStorage</li>
+        <li><strong>Revoca accesso HealthKit</strong> (Impostazioni iOS → Privacy → Salute → GymTracker): interrompe immediatamente qualsiasi accesso ai dati sanitari</li>
+      </ul>
+
+      <h3>6. Contatti</h3>
+      <p>Per qualsiasi domanda relativa a questa Policy o al trattamento dei tuoi dati:</p>
+      <p>📧 <a href="mailto:privacy@gymtracker.app">privacy@gymtracker.app</a></p>
+      <p>Le richieste verranno evase entro 30 giorni dalla ricezione.</p>
+    </div>
+
+    <div class="lang-en" id="cookie-en">
+      <div class="intro-text">
+        GymTracker is a native iOS app. Unlike websites, mobile apps do not use browser cookies in the traditional sense. We use equivalent storage and technical identifiers to run the app, remember preferences, and provide core functionality.
+      </div>
+
+      <h3>1. Local Device Storage</h3>
+      <p>GymTracker stores essential app data locally for performance and offline usage.</p>
+      <h4>AsyncStorage</h4>
+      <ul>
+        <li>User session/app state and preferences</li>
+        <li>Theme, language, units, and notification settings</li>
+        <li>Onboarding completion state</li>
+        <li>Offline workout cache</li>
+        <li>Apple Health and Apple Watch integration settings</li>
+      </ul>
+      <h4>iOS Keychain</h4>
+      <ul>
+        <li>Firebase authentication tokens (ID Token, Refresh Token)</li>
+        <li>Google/Apple sign-in secure credentials</li>
+      </ul>
+
+      <h3>2. Technical Identifiers</h3>
+      <p>The following identifiers are used only for secure app operation:</p>
+      <ul>
+        <li>Firebase JWT session tokens (short-lived, auto-refreshed)</li>
+        <li>RevenueCat anonymous subscription user identifier</li>
+        <li>iOS IDFV (Identifier for Vendor) — anonymous, reset on uninstall</li>
+      </ul>
+
+      <h3>3. Third-Party Services</h3>
+      <div class="service-row">
+        <span class="tag">Firebase / Google</span>
+        <p>Authentication, database/storage, cloud functions, and aggregated technical analytics.</p>
+      </div>
+      <div class="service-row">
+        <span class="tag">RevenueCat</span>
+        <p>Subscription verification and entitlement handling.</p>
+      </div>
+      <div class="service-row">
+        <span class="tag">Apple HealthKit</span>
+        <p>Health data sync only with explicit user permission.</p>
+      </div>
+
+      <h3>4. Retention</h3>
+      <ul>
+        <li>Session tokens: persist until logout/account removal</li>
+        <li>Preferences: persist until app uninstall or account deletion</li>
+        <li>Offline cache: refreshed by sync, removed on account deletion</li>
+      </ul>
+
+      <h3>5. Managing and Deleting Local Data</h3>
+      <ul>
+        <li><strong>Logout</strong>: clears auth/session data from Keychain</li>
+        <li><strong>Delete Account</strong>: removes all cloud and local account data</li>
+        <li><strong>Uninstall App</strong>: removes all local AsyncStorage data</li>
+        <li><strong>Revoke HealthKit access</strong>: iOS Settings → Privacy → Health → GymTracker</li>
+      </ul>
+
+      <h3>6. Contacts</h3>
+      <p>For questions about this Tracking &amp; Storage Policy:</p>
+      <p>📧 <a href="mailto:privacy@gymtracker.app">privacy@gymtracker.app</a></p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  © 2026 Innotek — GymTracker · App Store ID: 6759553013<br />
+  <a href="mailto:privacy@gymtracker.app">privacy@gymtracker.app</a> · <a href="mailto:support@gymtracker.app">support@gymtracker.app</a>
+</footer>
+
+<script>
+  function setLang(section, lang, btn) {
+    document.querySelectorAll('#' + section + '-it, #' + section + '-en').forEach(el => el.classList.remove('visible'));
+    document.getElementById(section + '-' + lang).classList.add('visible');
+    btn.closest('.doc-section').querySelectorAll('.lang-tab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+  // Highlight active nav link on scroll
+  const sections = document.querySelectorAll('.doc-section');
+  const navLinks = document.querySelectorAll('nav a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) current = s.id; });
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
+</script>
 </body>
 </html>
