@@ -4,12 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms of Service — GymTracker by INNOTEK</title>
+  <meta name="description" content="GymTracker Terms of Service — your rights and responsibilities when using the GymTracker app.">
   <link rel="icon" href="./favicon.png">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+
+<div class="scroll-progress"><div class="scroll-progress-bar" id="progressBar"></div></div>
+
 <nav>
-  <div class="nav-brand"><img src="./icon.png" alt="GymTracker"><span>GymTracker</span></div>
+  <div class="nav-brand">
+    <img src="./icon.png" alt="GymTracker">
+    <span>GymTracker</span>
+  </div>
   <div class="nav-links">
     <a href="./index.html">Home</a>
     <a href="./privacy.html">Privacy</a>
@@ -18,194 +25,478 @@
   </div>
 </nav>
 
-<div class="legal-hero">
-  <span class="section-label">📄 Legal</span>
+<div class="legal-hero-enhanced">
+  <img class="legal-hero-icon" src="./icon.png" alt="GymTracker">
+  <span class="section-label">📋 Legal</span>
   <h1>Terms of Service</h1>
-  <p>Last updated: January 2025 · Effective for GymTracker version 1.0+</p>
+  <p>GymTracker by INNOTEK · Last updated March 5, 2026 · Version 1.1</p>
 </div>
 
-<div class="legal-content">
-  <div class="lang-tabs">
-    <button class="lang-tab active" onclick="switchLang('it')">🇮🇹 Italiano</button>
-    <button class="lang-tab" onclick="switchLang('en')">🇬🇧 English</button>
-  </div>
+<div class="legal-layout">
 
-  <!-- ITALIANO -->
-  <div id="lang-it" class="lang-content active">
-    <div class="legal-section">
-      <h2>Termini di Servizio</h2>
-      <p>Utilizzando GymTracker, accetti i presenti Termini di Servizio. Leggili attentamente prima di utilizzare l'app.</p>
-    </div>
-    <div class="legal-section">
-      <h2>1. Accettazione dei Termini</h2>
-      <p>Utilizzando GymTracker accetti di rispettare questi termini. Se non sei d'accordo, ti invitiamo a non utilizzare l'app. I presenti termini si applicano a tutti gli utenti dell'app GymTracker.</p>
-    </div>
-    <div class="legal-section">
-      <h2>2. Descrizione del Servizio</h2>
-      <p>GymTracker è un'applicazione per il tracciamento degli allenamenti che offre:</p>
-      <ul>
-        <li>Creazione e gestione di programmi di allenamento personalizzati</li>
-        <li>Tracciamento in tempo reale degli esercizi</li>
-        <li>Statistiche avanzate e analisi delle performance</li>
-        <li>Integrazione con Apple Health e Apple Watch</li>
-        <li>Sincronizzazione dei dati tra dispositivi</li>
-        <li>Funzionalità premium tramite abbonamento GymTracker Pro</li>
+  <!-- TOC Sidebar IT -->
+  <aside class="toc-sidebar" id="tocSidebar">
+    <div class="toc-header">Contents</div>
+    <nav id="toc-it">
+      <ul class="toc-nav">
+        <li><a href="#it-s1" class="toc-link">1. Descrizione del Servizio</a></li>
+        <li><a href="#it-s2" class="toc-link">2. Idoneità</a></li>
+        <li><a href="#it-s3" class="toc-link">3. Account e Accesso</a></li>
+        <li><a href="#it-s4" class="toc-link">4. Abbonamenti e Pagamenti</a></li>
+        <li><a href="#it-s5" class="toc-link">5. Avvertenza Medica</a></li>
+        <li><a href="#it-s6" class="toc-link">6. Proprietà Intellettuale</a></li>
+        <li><a href="#it-s7" class="toc-link">7. Dati e Contenuti Utente</a></li>
+        <li><a href="#it-s8" class="toc-link">8. Limitazione di Responsabilità</a></li>
+        <li><a href="#it-s9" class="toc-link">9. Modifiche al Servizio</a></li>
+        <li><a href="#it-s10" class="toc-link">10. Legge Applicabile</a></li>
+        <li><a href="#it-s11" class="toc-link">11. Disposizioni Finali</a></li>
+        <li><a href="#it-s12" class="toc-link">12. Contatti</a></li>
       </ul>
-    </div>
-    <div class="legal-section">
-      <h2>3. Account Utente</h2>
-      <ul>
-        <li>Devi avere almeno 13 anni per utilizzare GymTracker</li>
-        <li>Sei responsabile della sicurezza del tuo account</li>
-        <li>Fornisci informazioni accurate durante la registrazione</li>
-        <li>Notificaci immediatamente in caso di accesso non autorizzato</li>
-        <li>Un account per persona — non condividere le credenziali</li>
+    </nav>
+    <nav id="toc-en" style="display:none;">
+      <ul class="toc-nav">
+        <li><a href="#en-s1" class="toc-link">1. Service Description</a></li>
+        <li><a href="#en-s2" class="toc-link">2. Eligibility</a></li>
+        <li><a href="#en-s3" class="toc-link">3. Accounts and Access</a></li>
+        <li><a href="#en-s4" class="toc-link">4. Subscriptions &amp; Billing</a></li>
+        <li><a href="#en-s5" class="toc-link">5. Medical Disclaimer</a></li>
+        <li><a href="#en-s6" class="toc-link">6. Intellectual Property</a></li>
+        <li><a href="#en-s7" class="toc-link">7. User Data &amp; Content</a></li>
+        <li><a href="#en-s8" class="toc-link">8. Limitation of Liability</a></li>
+        <li><a href="#en-s9" class="toc-link">9. Service Changes</a></li>
+        <li><a href="#en-s10" class="toc-link">10. Governing Law</a></li>
+        <li><a href="#en-s11" class="toc-link">11. Final Provisions</a></li>
+        <li><a href="#en-s12" class="toc-link">12. Contacts</a></li>
       </ul>
-    </div>
-    <div class="legal-section">
-      <h2>4. Abbonamento Pro</h2>
-      <p>GymTracker Pro è un abbonamento a pagamento che sblocca funzionalità avanzate.</p>
-      <div class="highlight-box">
-        <p>📦 Il pagamento viene addebitato tramite il tuo account Apple ID. L'abbonamento si rinnova automaticamente salvo disdetta almeno 24 ore prima del rinnovo.</p>
-      </div>
-      <ul>
-        <li>Puoi gestire o annullare l'abbonamento in Impostazioni iPhone → Apple ID → Abbonamenti</li>
-        <li>Non sono previsti rimborsi per periodi già pagati, salvo errori di fatturazione</li>
-        <li>I prezzi possono variare in base al paese e alle politiche Apple</li>
-      </ul>
-    </div>
-    <div class="legal-section">
-      <h2>5. Condotta dell'Utente</h2>
-      <p>È vietato:</p>
-      <ul>
-        <li>Tentare di accedere ai dati di altri utenti</li>
-        <li>Manipolare o compromettere il servizio</li>
-        <li>Utilizzare l'app per scopi illegali o non autorizzati</li>
-        <li>Condividere contenuti offensivi o inappropriati</li>
-        <li>Effettuare reverse engineering dell'app</li>
-      </ul>
-    </div>
-    <div class="legal-section">
-      <h2>6. Limitazione di Responsabilità</h2>
-      <div class="warning-box">
-        <p>⚠️ GymTracker è uno strumento di supporto all'allenamento, non un dispositivo medico. Consulta sempre un medico prima di iniziare un programma di esercizi fisici intensi.</p>
-      </div>
-      <p>INNOTEK non è responsabile per:</p>
-      <ul>
-        <li>Infortuni derivanti dall'uso improprio delle informazioni fornite dall'app</li>
-        <li>Perdita di dati dovuta a problemi tecnici al di fuori del nostro controllo</li>
-        <li>Interruzioni del servizio per manutenzione o problemi tecnici</li>
-      </ul>
-    </div>
-    <div class="legal-section">
-      <h2>7. Proprietà Intellettuale</h2>
-      <p>Tutto il contenuto dell'app (design, codice, loghi, testi) è di proprietà di INNOTEK e protetto da copyright. È vietata la riproduzione senza autorizzazione scritta.</p>
-    </div>
-    <div class="legal-section">
-      <h2>8. Modifiche ai Termini</h2>
-      <p>Ci riserviamo il diritto di modificare questi termini. Le modifiche significative saranno notificate tramite l'app o via email. L'uso continuato dopo le modifiche costituisce accettazione.</p>
-    </div>
-    <div class="legal-section">
-      <h2>9. Contatti</h2>
-      <div class="contact-box">
-        <p><strong>INNOTEK</strong></p>
-        <p>Email: <a href="mailto:innotekaps@gmail.com">innotekaps@gmail.com</a></p>
-      </div>
-    </div>
-  </div>
+    </nav>
+  </aside>
 
-  <!-- ENGLISH -->
-  <div id="lang-en" class="lang-content">
-    <div class="legal-section">
-      <h2>Terms of Service</h2>
-      <p>By using GymTracker, you agree to these Terms of Service. Please read them carefully before using the app.</p>
+  <main class="legal-content">
+    <div class="lang-tabs">
+      <button class="lang-tab active" onclick="switchLang('it')" id="tab-it">🇮🇹 Italiano</button>
+      <button class="lang-tab" onclick="switchLang('en')" id="tab-en">🇬🇧 English</button>
     </div>
-    <div class="legal-section">
-      <h2>1. Acceptance of Terms</h2>
-      <p>By using GymTracker you agree to abide by these terms. If you disagree, please do not use the app. These terms apply to all users of the GymTracker app.</p>
+
+    <div class="legal-meta">
+      <span class="legal-meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        5 marzo 2026
+      </span>
+      <span class="legal-meta-badge">Versione 1.1</span>
+      <span class="legal-meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        ~5 min lettura
+      </span>
     </div>
-    <div class="legal-section">
-      <h2>2. Service Description</h2>
-      <p>GymTracker is a workout tracking application offering:</p>
-      <ul>
-        <li>Creation and management of personalized training programs</li>
-        <li>Real-time exercise tracking</li>
-        <li>Advanced statistics and performance analytics</li>
-        <li>Integration with Apple Health and Apple Watch</li>
-        <li>Data synchronization across devices</li>
-        <li>Premium features via GymTracker Pro subscription</li>
-      </ul>
-    </div>
-    <div class="legal-section">
-      <h2>3. User Account</h2>
-      <ul>
-        <li>You must be at least 13 years old to use GymTracker</li>
-        <li>You are responsible for your account security</li>
-        <li>Provide accurate information during registration</li>
-        <li>Notify us immediately of any unauthorized access</li>
-        <li>One account per person — do not share credentials</li>
-      </ul>
-    </div>
-    <div class="legal-section">
-      <h2>4. Pro Subscription</h2>
-      <p>GymTracker Pro is a paid subscription that unlocks advanced features.</p>
-      <div class="highlight-box">
-        <p>📦 Payment is charged through your Apple ID account. The subscription auto-renews unless cancelled at least 24 hours before renewal.</p>
+
+    <!-- ═══════ ITALIANO ═══════ -->
+    <div id="lang-it" class="lang-content active">
+
+      <p style="font-size:15px;color:var(--text-secondary);line-height:1.75;margin-bottom:40px;padding-bottom:32px;border-bottom:1px solid var(--separator);">
+        I presenti Termini di Servizio ("Termini") regolano l'utilizzo dell'app GymTracker ("App"), sviluppata da Innotek. Utilizzando l'App accetti integralmente i presenti Termini. Se non sei d'accordo, non utilizzare l'App.
+      </p>
+
+      <span class="legal-section-anchor" id="it-s1"></span>
+      <div class="legal-section fade-in">
+        <div class="legal-section-header">
+          <span class="section-number">01</span>
+          <h2>Descrizione del Servizio</h2>
+        </div>
+        <p>GymTracker è un'app iOS per la gestione degli allenamenti con programmi personalizzati, tracciamento sessioni, statistiche e sincronizzazione opzionale con Apple Health.</p>
+        <ul>
+          <li>Pianificazione e gestione schede di allenamento</li>
+          <li>Storico allenamenti con statistiche e grafici</li>
+          <li>Import programmi da PDF, immagini e testo</li>
+          <li>Funzionalità avanzate disponibili con GymTracker Pro</li>
+        </ul>
       </div>
-      <ul>
-        <li>Manage or cancel your subscription in iPhone Settings → Apple ID → Subscriptions</li>
-        <li>No refunds for periods already paid, except for billing errors</li>
-        <li>Prices may vary by country and Apple policies</li>
-      </ul>
-    </div>
-    <div class="legal-section">
-      <h2>5. User Conduct</h2>
-      <p>You may not:</p>
-      <ul>
-        <li>Attempt to access other users' data</li>
-        <li>Manipulate or compromise the service</li>
-        <li>Use the app for illegal or unauthorized purposes</li>
-        <li>Share offensive or inappropriate content</li>
-        <li>Reverse engineer the app</li>
-      </ul>
-    </div>
-    <div class="legal-section">
-      <h2>6. Limitation of Liability</h2>
-      <div class="warning-box">
-        <p>⚠️ GymTracker is a workout support tool, not a medical device. Always consult a doctor before starting an intensive exercise program.</p>
+
+      <span class="legal-section-anchor" id="it-s2"></span>
+      <div class="legal-section fade-in">
+        <div class="legal-section-header">
+          <span class="section-number">02</span>
+          <h2>Idoneità</h2>
+        </div>
+        <ul>
+          <li>Devi rispettare i requisiti di età previsti dalla normativa locale</li>
+          <li>Devi avere capacità legale per accettare questi Termini</li>
+          <li>Non devi essere sospeso dall'utilizzo dei nostri servizi</li>
+        </ul>
       </div>
-      <p>INNOTEK is not responsible for:</p>
-      <ul>
-        <li>Injuries from improper use of information provided by the app</li>
-        <li>Data loss due to technical issues beyond our control</li>
-        <li>Service interruptions for maintenance or technical issues</li>
-      </ul>
-    </div>
-    <div class="legal-section">
-      <h2>7. Intellectual Property</h2>
-      <p>All app content (design, code, logos, text) is owned by INNOTEK and protected by copyright. Reproduction without written permission is prohibited.</p>
-    </div>
-    <div class="legal-section">
-      <h2>8. Changes to Terms</h2>
-      <p>We reserve the right to modify these terms. Significant changes will be notified through the app or via email. Continued use after changes constitutes acceptance.</p>
-    </div>
-    <div class="legal-section">
-      <h2>9. Contact</h2>
-      <div class="contact-box">
-        <p><strong>INNOTEK</strong></p>
-        <p>Email: <a href="mailto:innotekaps@gmail.com">innotekaps@gmail.com</a></p>
+
+      <span class="legal-section-anchor" id="it-s3"></span>
+      <div class="legal-section fade-in">
+        <div class="legal-section-header">
+          <span class="section-number">03</span>
+          <h2>Account e Accesso</h2>
+        </div>
+        <p>Per funzionalità cloud e backup può essere richiesto un account (Google, Apple o email/password). Sei responsabile della sicurezza del tuo account e delle attività effettuate con le tue credenziali.</p>
       </div>
-    </div>
-  </div>
-</div>
+
+      <span class="legal-section-anchor" id="it-s4"></span>
+      <div class="legal-section fade-in">
+        <div class="legal-section-header">
+          <span class="section-number">04</span>
+          <h2>Abbonamenti e Pagamenti</h2>
+        </div>
+        <p>Gli abbonamenti GymTracker Pro sono gestiti tramite Apple In-App Purchases e possono rinnovarsi automaticamente salvo disdetta dalle impostazioni di abbonamento Apple.</p>
+        <div class="premium-box">
+          <div class="premium-box-header">
+            <span>ℹ️</span>
+            <span class="premium-box-title">Trial gratuito</span>
+          </div>
+          <p>Se previsto, il trial si converte in abbonamento a pagamento salvo disdetta prima del rinnovo. La disdetta deve essere effettuata dalle Impostazioni di Apple almeno 24 ore prima della scadenza del periodo di prova.</p>
+        </div>
+      </div>
+
+      <span class="legal-section-anchor" id="it-s5"></span>
+      <div class="legal-section fade-in">
+        <div class="legal-section-header">
+          <span class="section-number">05</span>
+          <h2>Avvertenza Medica</h2>
+        </div>
+        <div class="warning-box">
+          <div class="warning-box-header">
+            <span class="warning-box-icon">⚠️</span>
+            <span class="warning-box-title">Avviso Importante</span>
+          </div>
+          <p>GymTracker non è un dispositivo medico e non fornisce diagnosi o prescrizioni mediche. Le informazioni e le funzionalità dell'App sono esclusivamente a scopo informativo e di monitoraggio dell'attività fisica personale.</p>
+        </div>
+        <p>Consulta sempre un professionista qualificato (medico, fisioterapista, personal trainer certificato) prima di iniziare nuovi programmi di allenamento, specialmente in presenza di condizioni di salute preesistenti.</p>
+      </div>
+
+      <span class="legal-section-anchor" id="it-s6"></span>
+      <div class="legal-section fade-in">
+        <div class="legal-section-header">
+          <span class="section-number">06</span>
+          <h2>Proprietà Intellettuale</h2>
+        </div>
+        <p>L'App e i relativi contenuti (codice sorgente, grafica, testi, algoritmi, database degli esercizi) sono di proprietà di Innotek o dei rispettivi licenzianti. È vietato copiare, decompilare, effettuare reverse engineering, modificare o riutilizzare i contenuti per scopi commerciali senza previa autorizzazione scritta.</p>
+      </div>
+
+      <span class="legal-section-anchor" id="it-s7"></span>
+      <div class="legal-section fade-in">
+        <div class="legal-section-header">
+          <span class="section-number">07</span>
+          <h2>Dati e Contenuti Utente</h2>
+        </div>
+        <p>Mantieni la proprietà dei tuoi dati di allenamento e dei contenuti che inserisci nell'App. Tali dati sono trattati solo per erogare le funzionalità dell'App come sync, backup e ripristino, e non vengono utilizzati per finalità commerciali o ceduti a terzi.</p>
+      </div>
+
+      <span class="legal-section-anchor" id="it-s8"></span>
+      <div class="legal-section fade-in">
+        <div class="legal-section-header">
+          <span class="section-number">08</span>
+          <h2>Limitazione di Responsabilità</h2>
+        </div>
+        <p>Nei limiti consentiti dalla legge applicabile, Innotek non risponde per:</p>
+        <ul>
+          <li>Danni indiretti, incidentali o conseguenti derivanti dall'utilizzo dell'App</li>
+          <li>Indisponibilità temporanee del servizio dovute a manutenzione o cause di forza maggiore</li>
+          <li>Decisioni prese dall'utente sulla base dei dati o delle analisi fornite dall'App</li>
+          <li>Perdita di dati non sincronizzati in caso di malfunzionamenti del dispositivo</li>
+        </ul>
+        <p>Questa limitazione non pregiudica i diritti inderogabili riconosciuti al consumatore dalla legge italiana ed europea.</p>
+      </div>
+
+      <span class="legal-section-anchor" id="it-s9"></span>
+      <div class="legal-section fade-in">
+        <div class="legal-section-header">
+          <span class="section-number">09</span>
+          <h2>Modifiche al Servizio</h2>
+        </div>
+        <p>Possiamo aggiornare, modificare o rimuovere funzionalità dell'App nel tempo per migliorare il servizio, garantire la sicurezza o rispettare requisiti legali. Le modifiche sostanziali saranno comunicate tramite canali appropriati (notifiche in-app, aggiornamento App Store, email).</p>
+      </div>
+
+      <span class="legal-section-anchor" id="it-s10"></span>
+      <div class="legal-section fade-in">
+        <div class="legal-section-header">
+          <span class="section-number">10</span>
+          <h2>Legge Applicabile</h2>
+        </div>
+        <p>I presenti Termini sono regolati dalla legge italiana, senza pregiudicare i diritti inderogabili del consumatore previsti dalla normativa europea (Direttiva 2011/83/UE, Codice del Consumo D.Lgs. 206/2005).</p>
+      </div>
+
+      <span class="legal-section-anchor" id="it-s11"></span>
+      <div class="legal-section fade-in">
+        <div class="legal-section-header">
+          <span class="section-number">11</span>
+          <h2>Disposizioni Finali</h2>
+        </div>
+        <p>Se una o più clausole dei presenti Termini sono ritenute non valide o inapplicabili da un'autorità competente, le restanti clausole restano pienamente efficaci. La mancata applicazione di una clausola da parte di Innotek non costituisce rinuncia al relativo diritto.</p>
+      </div>
+
+      <span class="legal-section-anchor" id="it-s12"></span>
+      <div class="legal-section fade-in">
+        <div class="legal-section-header">
+          <span class="section-number">12</span>
+          <h2>Contatti</h2>
+        </div>
+        <p>Per qualsiasi domanda relativa ai presenti Termini di Servizio, contattaci:</p>
+        <div class="contact-box">
+          <div class="contact-box-title">Assistenza GymTracker</div>
+          <div class="contact-box-sub">Innotek · App Store ID: 6759553013</div>
+          <div class="contact-box-links">
+            <a href="mailto:innotekaps@gmail.com" class="contact-link">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              innotekaps@gmail.com
+            </a>
+            <a href="https://apps.apple.com/app/id6759553013" class="contact-link" target="_blank">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              App Store
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-footer-note">
+        Ultimo aggiornamento: 5 marzo 2026 · Versione 1.1<br>
+        © 2026 Innotek. Tutti i diritti riservati.
+      </div>
+    </div><!-- /lang-it -->
+
+    <!-- ═══════ ENGLISH ═══════ -->
+    <div id="lang-en" class="lang-content">
+
+      <p style="font-size:15px;color:var(--text-secondary);line-height:1.75;margin-bottom:40px;padding-bottom:32px;border-bottom:1px solid var(--separator);">
+        These Terms of Service ("Terms") govern your use of the GymTracker app ("App"), developed by Innotek. By using the App, you accept these Terms in full. If you do not agree, do not use the App.
+      </p>
+
+      <span class="legal-section-anchor" id="en-s1"></span>
+      <div class="legal-section fade-in">
+        <div class="legal-section-header">
+          <span class="section-number">01</span>
+          <h2>Service Description</h2>
+        </div>
+        <p>GymTracker is an iOS fitness app for workout management with personalized programs, session tracking, analytics, and optional Apple Health synchronization.</p>
+        <ul>
+          <li>Workout program planning and management</li>
+          <li>Workout history with charts and detailed statistics</li>
+          <li>Import training plans from PDF, images, and text</li>
+          <li>Advanced features available with GymTracker Pro</li>
+        </ul>
+      </div>
+
+      <span class="legal-section-anchor" id="en-s2"></span>
+      <div class="legal-section fade-in">
+        <div class="legal-section-header">
+          <span class="section-number">02</span>
+          <h2>Eligibility</h2>
+        </div>
+        <ul>
+          <li>You must satisfy legal age requirements in your jurisdiction</li>
+          <li>You must have legal capacity to accept these Terms</li>
+          <li>You must not be suspended from our services</li>
+        </ul>
+      </div>
+
+      <span class="legal-section-anchor" id="en-s3"></span>
+      <div class="legal-section fade-in">
+        <div class="legal-section-header">
+          <span class="section-number">03</span>
+          <h2>Accounts and Access</h2>
+        </div>
+        <p>Cloud and backup features may require an account (Google, Apple, or email/password). You are responsible for the security of your account credentials and all activity conducted through your account.</p>
+      </div>
+
+      <span class="legal-section-anchor" id="en-s4"></span>
+      <div class="legal-section fade-in">
+        <div class="legal-section-header">
+          <span class="section-number">04</span>
+          <h2>Subscriptions and Billing</h2>
+        </div>
+        <p>GymTracker Pro subscriptions are billed via Apple In-App Purchases and may auto-renew unless canceled in Apple subscription settings.</p>
+        <div class="premium-box">
+          <div class="premium-box-header">
+            <span>ℹ️</span>
+            <span class="premium-box-title">Free trial</span>
+          </div>
+          <p>If available, free trials convert into paid subscriptions unless canceled before renewal. Cancellation must be made through Apple Settings at least 24 hours before the trial period ends.</p>
+        </div>
+      </div>
+
+      <span class="legal-section-anchor" id="en-s5"></span>
+      <div class="legal-section fade-in">
+        <div class="legal-section-header">
+          <span class="section-number">05</span>
+          <h2>Medical Disclaimer</h2>
+        </div>
+        <div class="warning-box">
+          <div class="warning-box-header">
+            <span class="warning-box-icon">⚠️</span>
+            <span class="warning-box-title">Important Notice</span>
+          </div>
+          <p>GymTracker is not a medical device and does not provide medical diagnosis, treatment, or prescription advice. App information and features are for personal fitness monitoring purposes only.</p>
+        </div>
+        <p>Always consult a qualified professional (physician, physiotherapist, certified personal trainer) before starting a new training program, especially if you have pre-existing health conditions.</p>
+      </div>
+
+      <span class="legal-section-anchor" id="en-s6"></span>
+      <div class="legal-section fade-in">
+        <div class="legal-section-header">
+          <span class="section-number">06</span>
+          <h2>Intellectual Property</h2>
+        </div>
+        <p>The App and its contents (source code, graphics, text, algorithms, exercise database) are owned by Innotek or its licensors. Copying, decompiling, reverse engineering, modifying, or commercial reuse without prior written authorization is strictly prohibited.</p>
+      </div>
+
+      <span class="legal-section-anchor" id="en-s7"></span>
+      <div class="legal-section fade-in">
+        <div class="legal-section-header">
+          <span class="section-number">07</span>
+          <h2>User Data and Content</h2>
+        </div>
+        <p>You retain ownership of your workout data and content entered in the App. This data is processed only to provide app functionality such as sync, backup, and restore — it is not used for commercial purposes or shared with third parties.</p>
+      </div>
+
+      <span class="legal-section-anchor" id="en-s8"></span>
+      <div class="legal-section fade-in">
+        <div class="legal-section-header">
+          <span class="section-number">08</span>
+          <h2>Limitation of Liability</h2>
+        </div>
+        <p>To the extent permitted by applicable law, Innotek is not liable for:</p>
+        <ul>
+          <li>Indirect, incidental, or consequential damages arising from use of the App</li>
+          <li>Temporary service unavailability due to maintenance or force majeure</li>
+          <li>User decisions made based on app data or analytics</li>
+          <li>Loss of unsynced data resulting from device malfunctions</li>
+        </ul>
+        <p>This limitation does not affect mandatory consumer rights recognized under Italian and European law.</p>
+      </div>
+
+      <span class="legal-section-anchor" id="en-s9"></span>
+      <div class="legal-section fade-in">
+        <div class="legal-section-header">
+          <span class="section-number">09</span>
+          <h2>Service Changes</h2>
+        </div>
+        <p>We may update, modify, or remove app features over time to improve the service, ensure security, or comply with legal requirements. Material changes will be communicated through appropriate channels (in-app notifications, App Store updates, or email).</p>
+      </div>
+
+      <span class="legal-section-anchor" id="en-s10"></span>
+      <div class="legal-section fade-in">
+        <div class="legal-section-header">
+          <span class="section-number">10</span>
+          <h2>Governing Law</h2>
+        </div>
+        <p>These Terms are governed by Italian law, without limiting mandatory consumer rights under European regulations (Directive 2011/83/EU, Consumer Code D.Lgs. 206/2005).</p>
+      </div>
+
+      <span class="legal-section-anchor" id="en-s11"></span>
+      <div class="legal-section fade-in">
+        <div class="legal-section-header">
+          <span class="section-number">11</span>
+          <h2>Final Provisions</h2>
+        </div>
+        <p>If any provision of these Terms is found invalid or unenforceable by a competent authority, the remaining provisions remain in full effect. Innotek's failure to enforce any provision does not constitute a waiver of that right.</p>
+      </div>
+
+      <span class="legal-section-anchor" id="en-s12"></span>
+      <div class="legal-section fade-in">
+        <div class="legal-section-header">
+          <span class="section-number">12</span>
+          <h2>Contacts</h2>
+        </div>
+        <p>For any questions about these Terms of Service, please contact us:</p>
+        <div class="contact-box">
+          <div class="contact-box-title">GymTracker Support</div>
+          <div class="contact-box-sub">Innotek · App Store ID: 6759553013</div>
+          <div class="contact-box-links">
+            <a href="mailto:innotekaps@gmail.com" class="contact-link">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              innotekaps@gmail.com
+            </a>
+            <a href="https://apps.apple.com/app/id6759553013" class="contact-link" target="_blank">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              App Store
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-footer-note">
+        Last updated: March 5, 2026 · Version 1.1<br>
+        © 2026 Innotek. All rights reserved.
+      </div>
+    </div><!-- /lang-en -->
+
+  </main>
+</div><!-- /legal-layout -->
 
 <footer>
   <div class="footer-inner">
-    <div><div class="footer-brand"><img src="./icon.png" alt="GymTracker"><span>GymTracker</span></div><p class="footer-desc">Made with ❤️ by INNOTEK</p></div>
-    <div class="footer-col"><h4>Legal</h4><ul><li><a href="./privacy.html">Privacy Policy</a></li><li><a href="./terms.html">Terms of Service</a></li><li><a href="./cookies.html">Cookie &amp; Tracking Policy</a></li></ul></div>
+    <div>
+      <div class="footer-brand"><img src="./icon.png" alt="GymTracker"><span>GymTracker</span></div>
+      <p class="footer-desc">Smart fitness tracking for iOS. Built with ❤️ by INNOTEK.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="./privacy.html">Privacy Policy</a></li>
+        <li><a href="./terms.html">Terms of Service</a></li>
+        <li><a href="./cookies.html">Cookies &amp; Tracking</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>App</h4>
+      <ul>
+        <li><a href="https://apps.apple.com/app/id6759553013" target="_blank">Download on App Store</a></li>
+        <li><a href="./index.html#features">Features</a></li>
+        <li><a href="./index.html#pro">GymTracker Pro</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul><li><a href="mailto:innotekaps@gmail.com">innotekaps@gmail.com</a></li></ul>
+    </div>
   </div>
-  <div class="footer-bottom"><p>© 2025 INNOTEK. All rights reserved.</p><a href="./index.html" style="font-size:13px;color:var(--text-muted);">← Back to Home</a></div>
+  <div class="footer-bottom">
+    <p>© 2026 Innotek. All rights reserved.</p>
+    <p>GymTracker App Store ID: 6759553013</p>
+  </div>
 </footer>
-<script>function switchLang(lang){document.querySelectorAll('.lang-tab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.lang-content').forEach(c=>c.classList.remove('active'));document.getElementById('lang-'+lang).classList.add('active');event.target.classList.add('active');}</script>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<script>
+  const savedLang = localStorage.getItem('gymtracker-lang') || 'it';
+  function switchLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    document.getElementById('tab-' + lang).classList.add('active');
+    document.getElementById('toc-it').style.display = lang === 'it' ? '' : 'none';
+    document.getElementById('toc-en').style.display = lang === 'en' ? '' : 'none';
+    localStorage.setItem('gymtracker-lang', lang);
+    triggerFadeIns();
+  }
+  switchLang(savedLang);
+
+  window.addEventListener('scroll', () => {
+    const s = document.documentElement.scrollTop;
+    const h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    document.getElementById('progressBar').style.width = (s / h * 100) + '%';
+    document.getElementById('backToTop').classList.toggle('visible', s > 400);
+    updateTOC();
+  }, {passive: true});
+
+  function updateTOC() {
+    const lang = localStorage.getItem('gymtracker-lang') || 'it';
+    const anchors = document.querySelectorAll('#lang-' + lang + ' .legal-section-anchor');
+    const links = document.querySelectorAll('#toc-' + lang + ' .toc-link');
+    let current = '';
+    anchors.forEach(anchor => { if (window.scrollY >= anchor.offsetTop - 120) current = anchor.id; });
+    links.forEach(link => { link.classList.toggle('active', link.getAttribute('href') === '#' + current); });
+  }
+
+  function triggerFadeIns() {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, {threshold: 0.08});
+    document.querySelectorAll('.fade-in:not(.visible)').forEach(el => obs.observe(el));
+  }
+  triggerFadeIns();
+</script>
 </body>
 </html>

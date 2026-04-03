@@ -21,6 +21,7 @@
   </div>
   <div class="nav-links">
     <a href="#features">Features</a>
+    <a href="#how-it-works">How it Works</a>
     <a href="#screenshots">Screenshots</a>
     <a href="#pro">Pro</a>
     <a href="./privacy.html">Privacy</a>
@@ -75,45 +76,71 @@
   <p class="section-sub">From workout logging to deep health analytics — GymTracker has every tool a serious athlete needs.</p>
 
   <div class="features-grid">
-    <div class="feature-card">
+    <div class="feature-card fade-in">
       <div class="feature-icon icon-purple">🏋️</div>
       <h3>Customized Workouts</h3>
       <p>Build and manage personalized training programs with exercises, sets, reps, and rest times tailored to your goals.</p>
     </div>
-    <div class="feature-card">
+    <div class="feature-card fade-in">
       <div class="feature-icon icon-blue">⏱️</div>
       <h3>Real-Time Tracking</h3>
       <p>Track exercises live with smart timers, rest countdowns, and automatic set logging during your active workouts.</p>
     </div>
-    <div class="feature-card">
+    <div class="feature-card fade-in">
       <div class="feature-icon icon-green">📊</div>
       <h3>Advanced Analytics</h3>
       <p>Deep-dive into volume charts, muscle distribution heat maps, strength progression, and intensity zones over time.</p>
     </div>
-    <div class="feature-card">
+    <div class="feature-card fade-in">
       <div class="feature-icon icon-red">❤️</div>
       <h3>Apple Health Sync</h3>
       <p>Seamlessly syncs workouts, heart rate, calories, weight, and activity data with Apple Health and Apple Watch.</p>
     </div>
-    <div class="feature-card">
+    <div class="feature-card fade-in">
       <div class="feature-icon icon-orange">📱</div>
       <h3>Apple Watch</h3>
       <p>Start, track and complete workouts directly from your wrist with Live Activities and real-time stats on your watch.</p>
     </div>
-    <div class="feature-card">
+    <div class="feature-card fade-in">
       <div class="feature-icon icon-indigo">🔄</div>
       <h3>Cross-Device Sync</h3>
       <p>Your training data syncs automatically across all your devices via Firebase so you're always up to date.</p>
     </div>
-    <div class="feature-card">
+    <div class="feature-card fade-in">
       <div class="feature-icon icon-cyan">📂</div>
       <h3>Import Programs</h3>
       <p>Import full workout programs from PDFs, images, and text files — the app extracts exercises automatically.</p>
     </div>
-    <div class="feature-card">
+    <div class="feature-card fade-in">
       <div class="feature-icon icon-pink">🌙</div>
       <h3>Offline Support</h3>
       <p>Train anywhere without an internet connection. Your data is stored locally and syncs when you're back online.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── How it Works ── -->
+<section id="how-it-works" style="background: linear-gradient(180deg, var(--bg) 0%, #0d0520 50%, var(--bg) 100%); max-width:100%; padding:0;">
+  <div style="max-width:1100px;margin:0 auto;padding:100px 24px;">
+    <div class="section-label">Simple to start</div>
+    <h2 class="section-title fade-in">How GymTracker works</h2>
+    <p class="section-sub fade-in">Get started in minutes. Track your first workout today.</p>
+    <div class="steps-grid">
+      <div class="step-card fade-in">
+        <div class="step-number">1</div>
+        <h3>Set up your profile</h3>
+        <p>Enter your goals, weight, height, and fitness level. GymTracker personalizes the experience just for you in under 2 minutes.</p>
+      </div>
+      <div class="step-card fade-in">
+        <div class="step-number">2</div>
+        <h3>Build or import a plan</h3>
+        <p>Create a custom training program or import one from a PDF, image, or text. Our AI extracts exercises automatically.</p>
+      </div>
+      <div class="step-card fade-in">
+        <div class="step-number">3</div>
+        <h3>Train &amp; track progress</h3>
+        <p>Log sets in real-time, rest with smart timers, and watch your strength grow with charts and analytics over time.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -122,17 +149,17 @@
 <div class="screenshots-section" id="screenshots">
   <div>
     <div class="section-label">See it in action</div>
-    <h2 class="section-title">Beautifully designed<br>for iPhone</h2>
-    <p class="section-sub">Every screen crafted for clarity, speed, and a premium feel — dark-first design with full light mode support.</p>
+    <h2 class="section-title fade-in">Beautifully designed<br>for iPhone</h2>
+    <p class="section-sub fade-in">Every screen crafted for clarity, speed, and a premium feel — dark-first design with full light mode support.</p>
 
-    <div class="screenshots-scroll">
+    <div class="screenshots-scroll" id="screenshotScroll" tabindex="0" aria-label="App screenshots carousel">
       <div class="screenshot-item">
         <img src="./screenshots/01_workout.png" alt="Workout Tab">
         <div class="screenshot-label">Workout</div>
       </div>
       <div class="screenshot-item">
         <img src="./screenshots/02_history.png" alt="Progress & History">
-        <div class="screenshot-label">History & Stats</div>
+        <div class="screenshot-label">History &amp; Stats</div>
       </div>
       <div class="screenshot-item">
         <img src="./screenshots/03_health.png" alt="Health Metrics">
@@ -142,6 +169,12 @@
         <img src="./screenshots/04_profile.png" alt="Profile">
         <div class="screenshot-label">Profile</div>
       </div>
+    </div>
+    <div class="carousel-dots" id="carouselDots">
+      <button class="carousel-dot active" onclick="scrollToScreenshot(0)" aria-label="Screenshot 1"></button>
+      <button class="carousel-dot" onclick="scrollToScreenshot(1)" aria-label="Screenshot 2"></button>
+      <button class="carousel-dot" onclick="scrollToScreenshot(2)" aria-label="Screenshot 3"></button>
+      <button class="carousel-dot" onclick="scrollToScreenshot(3)" aria-label="Screenshot 4"></button>
     </div>
   </div>
 </div>
@@ -170,6 +203,38 @@
 
 <!-- ── Footer ── -->
 <footer>
+
+<script>
+// Fade-in observer for index page
+const fadeObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); fadeObs.unobserve(e.target); } });
+}, {threshold: 0.08});
+document.querySelectorAll('.fade-in').forEach(el => fadeObs.observe(el));
+
+// Screenshot carousel keyboard nav + dots
+const scroll = document.getElementById('screenshotScroll');
+const dots = document.querySelectorAll('.carousel-dot');
+if (scroll) {
+  scroll.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') scroll.scrollBy({left: 300, behavior: 'smooth'});
+    if (e.key === 'ArrowLeft') scroll.scrollBy({left: -300, behavior: 'smooth'});
+  });
+  scroll.addEventListener('scroll', () => {
+    const items = scroll.querySelectorAll('.screenshot-item');
+    let idx = 0;
+    items.forEach((item, i) => {
+      if (item.offsetLeft <= scroll.scrollLeft + scroll.clientWidth / 2) idx = i;
+    });
+    dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+  }, {passive: true});
+}
+function scrollToScreenshot(idx) {
+  if (!scroll) return;
+  const items = scroll.querySelectorAll('.screenshot-item');
+  if (items[idx]) scroll.scrollTo({left: items[idx].offsetLeft - 24, behavior: 'smooth'});
+}
+</script>
+
   <div class="footer-inner">
     <div>
       <div class="footer-brand">
