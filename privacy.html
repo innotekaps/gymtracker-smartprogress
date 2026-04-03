@@ -3,18 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — GymTracker by INNOTEK</title>
-  <meta name="description" content="GymTracker Privacy Policy — how we collect, use and protect your personal data. GDPR compliant.">
+  <title>Privacy Policy - GymTracker by INNOTEK</title>
+  <meta name="description" content="GymTracker Privacy Policy - how we collect, use and protect your personal data. GDPR compliant.">
   <link rel="icon" href="./favicon.png">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 
-<!-- Scroll Progress -->
 <div class="scroll-progress"><div class="scroll-progress-bar" id="progressBar"></div></div>
 
-<!-- Nav -->
-<nav>
+<nav class="site-nav">
   <div class="nav-brand">
     <img src="./icon.png" alt="GymTracker">
     <span>GymTracker</span>
@@ -27,23 +25,18 @@
   </div>
 </nav>
 
-<!-- Hero -->
 <div class="legal-hero-enhanced">
   <img class="legal-hero-icon" src="./icon.png" alt="GymTracker">
-  <span class="section-label">🔒 Legal</span>
   <h1>Privacy Policy</h1>
   <p>GymTracker by INNOTEK · GDPR Compliant · Last updated March 5, 2026</p>
 </div>
 
-<!-- Layout -->
 <div class="legal-layout">
 
-  <!-- TOC Sidebar -->
   <aside class="toc-sidebar" id="tocSidebar">
     <div class="toc-header">Contents</div>
 
-    <!-- IT TOC -->
-    <nav id="toc-it">
+    <nav id="toc-it" class="toc-nav-pane">
       <ul class="toc-nav">
         <li><a href="#it-s1" class="toc-link">1. Titolare del Trattamento</a></li>
         <li><a href="#it-s2" class="toc-link">2. Dati Raccolti</a></li>
@@ -59,8 +52,7 @@
       </ul>
     </nav>
 
-    <!-- EN TOC (hidden by default) -->
-    <nav id="toc-en" style="display:none;">
+    <nav id="toc-en" class="toc-nav-pane" style="display:none;">
       <ul class="toc-nav">
         <li><a href="#en-s1" class="toc-link">1. Data Controller</a></li>
         <li><a href="#en-s2" class="toc-link">2. Data We Collect</a></li>
@@ -77,37 +69,28 @@
     </nav>
   </aside>
 
-  <!-- Main Content -->
   <main class="legal-content">
 
-    <!-- Language Tabs -->
     <div class="lang-tabs">
       <button class="lang-tab active" onclick="switchLang('it')" id="tab-it">🇮🇹 Italiano</button>
       <button class="lang-tab" onclick="switchLang('en')" id="tab-en">🇬🇧 English</button>
     </div>
 
-    <!-- Meta bar -->
     <div class="legal-meta">
       <span class="legal-meta-item">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
         5 marzo 2026
       </span>
       <span class="legal-meta-badge">Versione 1.1</span>
-      <span class="legal-meta-item">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        ~8 min lettura
-      </span>
-      <span class="legal-meta-item">🛡️ GDPR Compliant</span>
+
     </div>
 
-    <!-- ═══════ ITALIANO ═══════ -->
     <div id="lang-it" class="lang-content active">
 
       <p class="legal-intro" style="font-size:15px;color:var(--text-secondary);line-height:1.75;margin-bottom:40px;padding-bottom:32px;border-bottom:1px solid var(--separator);">
         La presente Informativa sulla Privacy descrive come GymTracker (di seguito "l'App"), sviluppata da Innotek, raccoglie, utilizza, conserva e protegge i dati personali degli utenti in conformità al Regolamento (UE) 2016/679 (GDPR), al D.Lgs. 196/2003 e successive modifiche, nonché alle linee guida Apple App Store sulla privacy delle applicazioni.
       </p>
 
-      <!-- S1 -->
       <span class="legal-section-anchor" id="it-s1"></span>
       <div class="legal-section fade-in">
         <div class="legal-section-header">
@@ -136,7 +119,6 @@
         <p>Per qualsiasi richiesta relativa al trattamento dei tuoi dati personali, puoi contattarci all'indirizzo email indicato sopra.</p>
       </div>
 
-      <!-- S2 -->
       <span class="legal-section-anchor" id="it-s2"></span>
       <div class="legal-section fade-in">
         <div class="legal-section-header">
@@ -173,13 +155,12 @@
         <div class="highlight-box">
           <div class="highlight-box-header">
             <span>🍎</span>
-            <span class="highlight-box-title">Dati HealthKit — Solo locali</span>
+            <span class="highlight-box-title">Dati HealthKit  -  Solo locali</span>
           </div>
           <p>Questi dati sanitari rimangono sul dispositivo e su HealthKit. Non vengono mai trasmessi ai nostri server né a terze parti. L'accesso a HealthKit è sempre revocabile dalle Impostazioni di iOS in qualsiasi momento.</p>
         </div>
       </div>
 
-      <!-- S3 -->
       <span class="legal-section-anchor" id="it-s3"></span>
       <div class="legal-section fade-in">
         <div class="legal-section-header">
@@ -188,15 +169,14 @@
         </div>
         <p>I tuoi dati personali vengono trattati per le seguenti finalità:</p>
         <ul>
-          <li><strong>Fornitura del servizio:</strong> gestione dell'account, sincronizzazione dei dati di allenamento su cloud, backup e ripristino — Base giuridica: esecuzione del contratto, art. 6, par. 1, lett. b GDPR</li>
-          <li><strong>Autenticazione:</strong> verifica dell'identità tramite Firebase Authentication, Google Sign-In e Apple Sign In — Base giuridica: esecuzione del contratto</li>
-          <li><strong>Abbonamenti e acquisti:</strong> gestione, verifica e rinnovo degli abbonamenti GymTracker Pro tramite RevenueCat e gli store Apple/Google — Base giuridica: esecuzione del contratto</li>
-          <li><strong>Miglioramento dell'App:</strong> analisi aggregata e anonima dell'utilizzo per migliorare le funzionalità — Base giuridica: legittimo interesse, art. 6, par. 1, lett. f GDPR</li>
-          <li><strong>Adempimento di obblighi legali:</strong> conservazione dei dati contabili relativi agli acquisti per il periodo previsto dalla legge — Base giuridica: obbligo legale, art. 6, par. 1, lett. c GDPR</li>
+          <li><strong>Fornitura del servizio:</strong> gestione dell'account, sincronizzazione dei dati di allenamento su cloud, backup e ripristino  -  Base giuridica: esecuzione del contratto, art. 6, par. 1, lett. b GDPR</li>
+          <li><strong>Autenticazione:</strong> verifica dell'identità tramite Firebase Authentication, Google Sign-In e Apple Sign In  -  Base giuridica: esecuzione del contratto</li>
+          <li><strong>Abbonamenti e acquisti:</strong> gestione, verifica e rinnovo degli abbonamenti GymTracker Pro tramite RevenueCat e gli store Apple/Google  -  Base giuridica: esecuzione del contratto</li>
+          <li><strong>Miglioramento dell'App:</strong> analisi aggregata e anonima dell'utilizzo per migliorare le funzionalità  -  Base giuridica: legittimo interesse, art. 6, par. 1, lett. f GDPR</li>
+          <li><strong>Adempimento di obblighi legali:</strong> conservazione dei dati contabili relativi agli acquisti per il periodo previsto dalla legge  -  Base giuridica: obbligo legale, art. 6, par. 1, lett. c GDPR</li>
         </ul>
       </div>
 
-      <!-- S4 -->
       <span class="legal-section-anchor" id="it-s4"></span>
       <div class="legal-section fade-in">
         <div class="legal-section-header">
@@ -207,26 +187,13 @@
 
         <h3>Google Firebase (Alphabet Inc.)</h3>
         <p>Utilizziamo Firebase per l'autenticazione degli utenti (Firebase Auth), l'archiviazione dei dati di allenamento su cloud (Firestore), il backup delle immagini del profilo (Cloud Storage) e l'elaborazione intelligente dei programmi di allenamento (Cloud Functions + Gemini AI). I dati sono trattati su server localizzati in Europa (region europe-west1).</p>
-        <div class="info-box">
-          <div class="info-box-header">
-            <span class="info-box-icon">🔗</span>
-            <span class="info-box-title">Privacy Policy Firebase</span>
-          </div>
-          <p><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></p>
-        </div>
+        <p>Privacy policy Firebase: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></p>
 
         <h3>RevenueCat Inc.</h3>
-        <p>RevenueCat gestisce la verifica e il monitoraggio degli abbonamenti in-app. RevenueCat riceve un identificativo anonimo dell'utente e i dati di acquisto necessari alla verifica degli abbonamenti. RevenueCat non ha accesso ai tuoi dati di allenamento o sanitari.</p>
-        <div class="info-box">
-          <div class="info-box-header">
-            <span class="info-box-icon">🔗</span>
-            <span class="info-box-title">Privacy Policy RevenueCat</span>
-          </div>
-          <p><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></p>
-        </div>
+        <p>RevenueCat gestisce la verifica degli abbonamenti in-app tramite un identificativo anonimo dell'utente. Non ha accesso ai dati di allenamento o sanitari.</p>
+        <p>Privacy policy RevenueCat: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></p>
       </div>
 
-      <!-- S5 -->
       <span class="legal-section-anchor" id="it-s5"></span>
       <div class="legal-section fade-in">
         <div class="legal-section-header">
@@ -248,7 +215,6 @@
         </div>
       </div>
 
-      <!-- S6 -->
       <span class="legal-section-anchor" id="it-s6"></span>
       <div class="legal-section fade-in">
         <div class="legal-section-header">
@@ -274,7 +240,6 @@
         </div>
       </div>
 
-      <!-- S7 -->
       <span class="legal-section-anchor" id="it-s7"></span>
       <div class="legal-section fade-in">
         <div class="legal-section-header">
@@ -291,7 +256,6 @@
         </ul>
       </div>
 
-      <!-- S8 -->
       <span class="legal-section-anchor" id="it-s8"></span>
       <div class="legal-section fade-in">
         <div class="legal-section-header">
@@ -301,7 +265,6 @@
         <p>I dati trattati da Google Firebase sono principalmente elaborati all'interno dell'Unione Europea (server europe-west1). Eventuali trasferimenti verso paesi terzi avvengono nel rispetto delle garanzie previste dal GDPR, incluse le Clausole Contrattuali Standard (SCC) approvate dalla Commissione Europea.</p>
       </div>
 
-      <!-- S9 -->
       <span class="legal-section-anchor" id="it-s9"></span>
       <div class="legal-section fade-in">
         <div class="legal-section-header">
@@ -311,7 +274,6 @@
         <p>GymTracker non è destinata a minori di 16 anni. Non raccogliamo consapevolmente dati personali di utenti di età inferiore ai 16 anni. Se ritieni che un minore abbia utilizzato l'App e fornito dati personali, contattaci immediatamente a <a href="mailto:innotekaps@gmail.com">innotekaps@gmail.com</a> per provvedere alla cancellazione immediata.</p>
       </div>
 
-      <!-- S10 -->
       <span class="legal-section-anchor" id="it-s10"></span>
       <div class="legal-section fade-in">
         <div class="legal-section-header">
@@ -321,7 +283,6 @@
         <p>Potremmo aggiornare periodicamente la presente Informativa sulla Privacy per riflettere modifiche legislative, tecnologiche o nei servizi offerti. In caso di modifiche sostanziali, ti notificheremo tramite una notifica in-app o via email. La data dell'ultimo aggiornamento è sempre indicata in fondo a questo documento. Ti invitiamo a consultare periodicamente questa pagina.</p>
       </div>
 
-      <!-- S11 Contatti -->
       <span class="legal-section-anchor" id="it-s11"></span>
       <div class="legal-section fade-in">
         <div class="legal-section-header">
@@ -330,7 +291,7 @@
         </div>
         <p>Per qualsiasi questione relativa alla presente Informativa o al trattamento dei tuoi dati personali, non esitare a contattarci:</p>
         <div class="contact-box">
-          <div class="contact-box-title">Contatti INNOTEK — GymTracker</div>
+          <div class="contact-box-title">INNOTEK - GymTracker</div>
           <div class="contact-box-sub">Risponderemo entro 30 giorni dalla ricezione della tua richiesta</div>
           <div class="contact-box-links">
             <a href="mailto:innotekaps@gmail.com" class="contact-link">
@@ -349,16 +310,12 @@
         Ultimo aggiornamento: 5 marzo 2026 · Versione 1.1<br>
         © 2026 Innotek. Tutti i diritti riservati.
       </div>
-    </div><!-- /lang-it -->
-
-    <!-- ═══════ ENGLISH ═══════ -->
-    <div id="lang-en" class="lang-content">
+    </div><div id="lang-en" class="lang-content">
 
       <p class="legal-intro" style="font-size:15px;color:var(--text-secondary);line-height:1.75;margin-bottom:40px;padding-bottom:32px;border-bottom:1px solid var(--separator);">
         This Privacy Policy explains how GymTracker (the "App"), developed by Innotek, collects, uses, stores, and protects personal data in compliance with the EU General Data Protection Regulation (GDPR), D.Lgs. 196/2003, and Apple App Store privacy guidelines.
       </p>
 
-      <!-- S1 EN -->
       <span class="legal-section-anchor" id="en-s1"></span>
       <div class="legal-section fade-in">
         <div class="legal-section-header">
@@ -387,7 +344,6 @@
         <p>For any request about personal data processing, contact us at the email address above.</p>
       </div>
 
-      <!-- S2 EN -->
       <span class="legal-section-anchor" id="en-s2"></span>
       <div class="legal-section fade-in">
         <div class="legal-section-header">
@@ -424,13 +380,12 @@
         <div class="highlight-box">
           <div class="highlight-box-header">
             <span>🍎</span>
-            <span class="highlight-box-title">HealthKit Data — Device only</span>
+            <span class="highlight-box-title">HealthKit Data  -  Device only</span>
           </div>
           <p>Health data remains on your device and in HealthKit. It is never transmitted to our servers or sold to third parties. HealthKit access can always be revoked in iOS Settings.</p>
         </div>
       </div>
 
-      <!-- S3 EN -->
       <span class="legal-section-anchor" id="en-s3"></span>
       <div class="legal-section fade-in">
         <div class="legal-section-header">
@@ -439,15 +394,14 @@
         </div>
         <p>Your personal data is processed for the following purposes:</p>
         <ul>
-          <li><strong>Service delivery:</strong> account management, cloud sync of workout data, backup and restore — Legal basis: contract performance, Art. 6(1)(b) GDPR</li>
-          <li><strong>Authentication:</strong> identity verification via Firebase Authentication, Google Sign-In, and Apple Sign In — Legal basis: contract performance</li>
-          <li><strong>Subscriptions and billing:</strong> management, verification, and renewal of GymTracker Pro subscriptions via RevenueCat and Apple/Google stores — Legal basis: contract performance</li>
-          <li><strong>Product improvement:</strong> aggregated, anonymized usage analysis to improve features — Legal basis: legitimate interest, Art. 6(1)(f) GDPR</li>
-          <li><strong>Legal compliance:</strong> retention of purchase/accounting records as required by law — Legal basis: legal obligation, Art. 6(1)(c) GDPR</li>
+          <li><strong>Service delivery:</strong> account management, cloud sync of workout data, backup and restore  -  Legal basis: contract performance, Art. 6(1)(b) GDPR</li>
+          <li><strong>Authentication:</strong> identity verification via Firebase Authentication, Google Sign-In, and Apple Sign In  -  Legal basis: contract performance</li>
+          <li><strong>Subscriptions and billing:</strong> management, verification, and renewal of GymTracker Pro subscriptions via RevenueCat and Apple/Google stores  -  Legal basis: contract performance</li>
+          <li><strong>Product improvement:</strong> aggregated, anonymized usage analysis to improve features  -  Legal basis: legitimate interest, Art. 6(1)(f) GDPR</li>
+          <li><strong>Legal compliance:</strong> retention of purchase/accounting records as required by law  -  Legal basis: legal obligation, Art. 6(1)(c) GDPR</li>
         </ul>
       </div>
 
-      <!-- S4 EN -->
       <span class="legal-section-anchor" id="en-s4"></span>
       <div class="legal-section fade-in">
         <div class="legal-section-header">
@@ -458,26 +412,13 @@
 
         <h3>Google Firebase (Alphabet Inc.)</h3>
         <p>We use Firebase for user authentication (Firebase Auth), cloud workout data storage (Firestore), profile image backup (Cloud Storage), and intelligent training program processing (Cloud Functions + Gemini AI). Data is processed on servers located in Europe (region europe-west1).</p>
-        <div class="info-box">
-          <div class="info-box-header">
-            <span class="info-box-icon">🔗</span>
-            <span class="info-box-title">Firebase Privacy Policy</span>
-          </div>
-          <p><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></p>
-        </div>
+        <p>Firebase privacy policy: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></p>
 
         <h3>RevenueCat Inc.</h3>
-        <p>RevenueCat handles in-app subscription verification and monitoring. RevenueCat receives an anonymous user identifier and purchase data needed for subscription verification. RevenueCat has no access to your workout or health data.</p>
-        <div class="info-box">
-          <div class="info-box-header">
-            <span class="info-box-icon">🔗</span>
-            <span class="info-box-title">RevenueCat Privacy Policy</span>
-          </div>
-          <p><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></p>
-        </div>
+        <p>RevenueCat handles in-app subscription verification via an anonymous user identifier. It has no access to workout or health data.</p>
+        <p>RevenueCat privacy policy: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></p>
       </div>
 
-      <!-- S5 EN -->
       <span class="legal-section-anchor" id="en-s5"></span>
       <div class="legal-section fade-in">
         <div class="legal-section-header">
@@ -499,7 +440,6 @@
         </div>
       </div>
 
-      <!-- S6 EN -->
       <span class="legal-section-anchor" id="en-s6"></span>
       <div class="legal-section fade-in">
         <div class="legal-section-header">
@@ -525,7 +465,6 @@
         </div>
       </div>
 
-      <!-- S7 EN -->
       <span class="legal-section-anchor" id="en-s7"></span>
       <div class="legal-section fade-in">
         <div class="legal-section-header">
@@ -542,7 +481,6 @@
         </ul>
       </div>
 
-      <!-- S8 EN -->
       <span class="legal-section-anchor" id="en-s8"></span>
       <div class="legal-section fade-in">
         <div class="legal-section-header">
@@ -552,7 +490,6 @@
         <p>Data processed by Google Firebase is primarily handled within the European Union (europe-west1 region). Any transfers to third countries comply with GDPR safeguards, including Standard Contractual Clauses (SCCs) approved by the European Commission.</p>
       </div>
 
-      <!-- S9 EN -->
       <span class="legal-section-anchor" id="en-s9"></span>
       <div class="legal-section fade-in">
         <div class="legal-section-header">
@@ -562,7 +499,6 @@
         <p>GymTracker is not intended for users under the age of 16. We do not knowingly collect personal data from users under 16. If you believe a minor has used the App and provided personal data, contact us immediately at <a href="mailto:innotekaps@gmail.com">innotekaps@gmail.com</a> to arrange immediate deletion.</p>
       </div>
 
-      <!-- S10 EN -->
       <span class="legal-section-anchor" id="en-s10"></span>
       <div class="legal-section fade-in">
         <div class="legal-section-header">
@@ -572,7 +508,6 @@
         <p>We may periodically update this Privacy Policy to reflect legislative, technological, or service changes. For material changes, we will notify you via an in-app notification or email. The date of the last update is always shown at the bottom of this document. We encourage you to review this page periodically.</p>
       </div>
 
-      <!-- S11 EN Contacts -->
       <span class="legal-section-anchor" id="en-s11"></span>
       <div class="legal-section fade-in">
         <div class="legal-section-header">
@@ -581,7 +516,7 @@
         </div>
         <p>For any questions about this Privacy Policy or the processing of your personal data, please contact us:</p>
         <div class="contact-box">
-          <div class="contact-box-title">INNOTEK — GymTracker Privacy</div>
+          <div class="contact-box-title">INNOTEK - GymTracker</div>
           <div class="contact-box-sub">We'll respond within 30 days of receiving your request</div>
           <div class="contact-box-links">
             <a href="mailto:innotekaps@gmail.com" class="contact-link">
@@ -600,17 +535,27 @@
         Last updated: March 5, 2026 · Version 1.1<br>
         © 2026 Innotek. All rights reserved.
       </div>
-    </div><!-- /lang-en -->
-
-  </main>
-</div><!-- /legal-layout -->
-
-<!-- Footer -->
-<footer>
+    </div></main>
+</div><footer>
   <div class="footer-inner">
     <div>
       <div class="footer-brand"><img src="./icon.png" alt="GymTracker"><span>GymTracker</span></div>
-      <p class="footer-desc">Smart fitness tracking for iOS. Built with ❤️ by INNOTEK.</p>
+      <p class="footer-desc">Smart Progress for iPhone by INNOTEK.</p>
+    </div>
+    <div class="footer-col">
+      <h4>App</h4>
+      <ul>
+        <li><a href="https://apps.apple.com/app/id6759553013" target="_blank" rel="noopener">Download on App Store</a></li>
+        <li><a href="./index.html#features">Features</a></li>
+        <li><a href="./index.html#pro">GymTracker Pro</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="mailto:innotekaps@gmail.com">innotekaps@gmail.com</a></li>
+        <li><a href="./index.html#screenshots">Screenshots</a></li>
+      </ul>
     </div>
     <div class="footer-col">
       <h4>Legal</h4>
@@ -620,20 +565,6 @@
         <li><a href="./cookies.html">Cookies &amp; Tracking</a></li>
       </ul>
     </div>
-    <div class="footer-col">
-      <h4>App</h4>
-      <ul>
-        <li><a href="https://apps.apple.com/app/id6759553013" target="_blank">Download on App Store</a></li>
-        <li><a href="./index.html#features">Features</a></li>
-        <li><a href="./index.html#pro">GymTracker Pro</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <ul>
-        <li><a href="mailto:innotekaps@gmail.com">innotekaps@gmail.com</a></li>
-      </ul>
-    </div>
   </div>
   <div class="footer-bottom">
     <p>© 2026 Innotek. All rights reserved.</p>
@@ -641,7 +572,6 @@
   </div>
 </footer>
 
-<!-- Back to top -->
 <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 
 <script>

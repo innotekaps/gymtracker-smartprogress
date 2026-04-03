@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GymTracker — Smart Progress</title>
+  <title>GymTracker - Smart Progress</title>
   <meta name="description" content="GymTracker is a fitness tracking app for iPhone. Log workouts, monitor health metrics, and track progress with detailed analytics.">
-  <meta property="og:title" content="GymTracker — Smart Progress">
+  <meta property="og:title" content="GymTracker - Smart Progress">
   <meta property="og:description" content="Fitness tracking for iPhone by INNOTEK.">
   <meta property="og:image" content="./screenshots/01_workout.png">
   <link rel="icon" href="./favicon.png">
@@ -13,8 +13,7 @@
 </head>
 <body>
 
-<!-- ── Navigation ── -->
-<nav>
+<nav class="site-nav">
   <div class="nav-brand">
     <img src="./icon.png" alt="GymTracker">
     <span>GymTracker</span>
@@ -27,12 +26,11 @@
   </div>
 </nav>
 
-<!-- ── Hero ── -->
 <section class="hero" id="home">
-  <div class="hero-badge">Available on the App Store</div>
+  <div class="hero-badge">Smart Progress for iPhone</div>
   <img class="app-icon-hero" src="./icon.png" alt="GymTracker icon">
   <h1>Your Gym.<br>Your Progress.</h1>
-  <p class="hero-sub">Log workouts, track strength, monitor health — all in one focused app built for iPhone.</p>
+  <p class="hero-sub">Smart Progress for workouts, strength, and health - all in one focused app built for iPhone.</p>
   <div class="hero-ctas">
     <a href="https://apps.apple.com/app/id6759553013" class="btn-primary" target="_blank">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
@@ -45,7 +43,6 @@
   </div>
 </section>
 
-<!-- ── Stats bar ── -->
 <div class="stats-bar">
   <div class="stats-inner">
     <div class="stat-item">
@@ -67,10 +64,9 @@
   </div>
 </div>
 
-<!-- ── Features ── -->
 <section id="features">
   <h2 class="section-title">Built for how you train</h2>
-  <p class="section-sub">From your first rep to your personal record — GymTracker covers every aspect of your training.</p>
+  <p class="section-sub">From your first rep to your personal record - GymTracker covers every aspect of your training.</p>
 
   <div class="features-grid">
     <div class="feature-card fade-in">
@@ -92,7 +88,7 @@
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
       </div>
       <h3>Strength Analytics</h3>
-      <p>Volume charts, muscle distribution, progression curves, and personal records — tracked over weeks and months.</p>
+      <p>Volume charts, muscle distribution, progression curves, and personal records - tracked over weeks and months.</p>
     </div>
     <div class="feature-card fade-in">
       <div class="feature-icon icon-red">
@@ -132,45 +128,51 @@
   </div>
 </section>
 
-<!-- ── Screenshots ── -->
 <div class="screenshots-section" id="screenshots">
   <div>
     <h2 class="section-title fade-in">Designed for iPhone</h2>
     <p class="section-sub fade-in">Dark-first interface with full light mode support. Every screen built for clarity and speed.</p>
 
-    <div class="screenshots-scroll" id="screenshotScroll" tabindex="0" aria-label="App screenshots">
-      <div class="screenshot-item">
-        <img src="./screenshots/01_workout.png" alt="Workout Programs" loading="lazy" decoding="async">
-        <div class="screenshot-label">Workout</div>
+    <div class="screenshots-shell fade-in">
+      <button class="carousel-button carousel-button-prev" type="button" id="carouselPrev" aria-label="Previous screenshot">
+        <span aria-hidden="true">&#8249;</span>
+      </button>
+      <div class="screenshots-scroll" id="screenshotScroll" tabindex="0" aria-label="App screenshots">
+        <div class="screenshot-item">
+          <img src="./screenshots/01_workout.png" alt="Workout Programs" loading="lazy" decoding="async">
+          <div class="screenshot-label">Workout</div>
+        </div>
+        <div class="screenshot-item">
+          <img src="./screenshots/02_statistics.png" alt="Statistics" loading="lazy" decoding="async">
+          <div class="screenshot-label">Statistics</div>
+        </div>
+        <div class="screenshot-item">
+          <img src="./screenshots/03_muscle.png" alt="Muscle Analysis" loading="lazy" decoding="async">
+          <div class="screenshot-label">Muscle Analysis</div>
+        </div>
+        <div class="screenshot-item">
+          <img src="./screenshots/04_health.png" alt="Health" loading="lazy" decoding="async">
+          <div class="screenshot-label">Health</div>
+        </div>
+        <div class="screenshot-item">
+          <img src="./screenshots/05_profile.png" alt="Profile" loading="lazy" decoding="async">
+          <div class="screenshot-label">Profile</div>
+        </div>
       </div>
-      <div class="screenshot-item">
-        <img src="./screenshots/02_statistics.png" alt="Statistics" loading="lazy" decoding="async">
-        <div class="screenshot-label">Statistics</div>
-      </div>
-      <div class="screenshot-item">
-        <img src="./screenshots/03_muscle.png" alt="Muscle Analysis" loading="lazy" decoding="async">
-        <div class="screenshot-label">Muscle Analysis</div>
-      </div>
-      <div class="screenshot-item">
-        <img src="./screenshots/04_health.png" alt="Health" loading="lazy" decoding="async">
-        <div class="screenshot-label">Health</div>
-      </div>
-      <div class="screenshot-item">
-        <img src="./screenshots/05_profile.png" alt="Profile" loading="lazy" decoding="async">
-        <div class="screenshot-label">Profile</div>
-      </div>
+      <button class="carousel-button carousel-button-next" type="button" id="carouselNext" aria-label="Next screenshot">
+        <span aria-hidden="true">&#8250;</span>
+      </button>
     </div>
     <div class="carousel-dots" id="carouselDots">
-      <button class="carousel-dot active" onclick="scrollToScreenshot(0)" aria-label="Screenshot 1"></button>
-      <button class="carousel-dot" onclick="scrollToScreenshot(1)" aria-label="Screenshot 2"></button>
-      <button class="carousel-dot" onclick="scrollToScreenshot(2)" aria-label="Screenshot 3"></button>
-      <button class="carousel-dot" onclick="scrollToScreenshot(3)" aria-label="Screenshot 4"></button>
-      <button class="carousel-dot" onclick="scrollToScreenshot(4)" aria-label="Screenshot 5"></button>
+      <button class="carousel-dot active" type="button" data-index="0" aria-label="Screenshot 1"></button>
+      <button class="carousel-dot" type="button" data-index="1" aria-label="Screenshot 2"></button>
+      <button class="carousel-dot" type="button" data-index="2" aria-label="Screenshot 3"></button>
+      <button class="carousel-dot" type="button" data-index="3" aria-label="Screenshot 4"></button>
+      <button class="carousel-dot" type="button" data-index="4" aria-label="Screenshot 5"></button>
     </div>
   </div>
 </div>
 
-<!-- ── Pro ── -->
 <section id="pro">
   <div class="pro-card">
     <div class="section-label">GymTracker Pro</div>
@@ -192,7 +194,6 @@
   </div>
 </section>
 
-<!-- ── Footer ── -->
 <footer>
   <div class="footer-inner">
     <div>
@@ -200,7 +201,7 @@
         <img src="./icon.png" alt="GymTracker">
         <span>GymTracker</span>
       </div>
-      <p class="footer-desc">Smart fitness tracking for iPhone by INNOTEK.</p>
+      <p class="footer-desc">Smart Progress for iPhone by INNOTEK.</p>
     </div>
     <div class="footer-col">
       <h4>App</h4>
@@ -208,13 +209,19 @@
         <li><a href="#features">Features</a></li>
         <li><a href="#screenshots">Screenshots</a></li>
         <li><a href="#pro">Pro</a></li>
-        <li><a href="https://apps.apple.com/app/id6759553013" target="_blank">App Store</a></li>
+        <li><a href="https://apps.apple.com/app/id6759553013" target="_blank" rel="noopener">App Store</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Support</h4>
       <ul>
         <li><a href="mailto:innotekaps@gmail.com">Contact</a></li>
+        <li><a href="https://apps.apple.com/app/id6759553013" target="_blank" rel="noopener">Download</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
         <li><a href="./privacy.html">Privacy Policy</a></li>
         <li><a href="./terms.html">Terms of Service</a></li>
         <li><a href="./cookies.html">Cookie Policy</a></li>
@@ -234,26 +241,70 @@ const fadeObs = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fade-in').forEach(el => fadeObs.observe(el));
 
 const scroll = document.getElementById('screenshotScroll');
-const dots = document.querySelectorAll('.carousel-dot');
+const items = scroll ? Array.from(scroll.querySelectorAll('.screenshot-item')) : [];
+const dots = Array.from(document.querySelectorAll('.carousel-dot'));
+const prevButton = document.getElementById('carouselPrev');
+const nextButton = document.getElementById('carouselNext');
+let activeScreenshot = 0;
+
+function getCenteredScreenshotIndex() {
+  if (!scroll || items.length === 0) return 0;
+  const viewportCenter = scroll.scrollLeft + scroll.clientWidth / 2;
+  let nextIndex = 0;
+  let minDistance = Number.POSITIVE_INFINITY;
+
+  items.forEach((item, index) => {
+    const itemCenter = item.offsetLeft + item.offsetWidth / 2;
+    const distance = Math.abs(itemCenter - viewportCenter);
+    if (distance < minDistance) {
+      minDistance = distance;
+      nextIndex = index;
+    }
+  });
+
+  return nextIndex;
+}
+
+function updateCarouselState(index = getCenteredScreenshotIndex()) {
+  activeScreenshot = index;
+  dots.forEach((dot, dotIndex) => dot.classList.toggle('active', dotIndex === index));
+  if (prevButton) prevButton.disabled = index === 0;
+  if (nextButton) nextButton.disabled = index === items.length - 1;
+}
+
+function scrollToScreenshot(index) {
+  if (!scroll || !items[index]) return;
+  items[index].scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'center'});
+}
+
 if (scroll) {
   scroll.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight') scroll.scrollBy({left: 300, behavior: 'smooth'});
-    if (e.key === 'ArrowLeft') scroll.scrollBy({left: -300, behavior: 'smooth'});
+    if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      scrollToScreenshot(Math.min(activeScreenshot + 1, items.length - 1));
+    }
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      scrollToScreenshot(Math.max(activeScreenshot - 1, 0));
+    }
   });
+  scroll.addEventListener('wheel', (e) => {
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      e.preventDefault();
+      scroll.scrollBy({left: e.deltaY, behavior: 'smooth'});
+    }
+  }, {passive: false});
   scroll.addEventListener('scroll', () => {
-    const items = scroll.querySelectorAll('.screenshot-item');
-    let idx = 0;
-    items.forEach((item, i) => {
-      if (item.offsetLeft <= scroll.scrollLeft + scroll.clientWidth / 2) idx = i;
-    });
-    dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+    window.requestAnimationFrame(() => updateCarouselState());
   }, {passive: true});
+  updateCarouselState(0);
 }
-function scrollToScreenshot(idx) {
-  if (!scroll) return;
-  const items = scroll.querySelectorAll('.screenshot-item');
-  if (items[idx]) scroll.scrollTo({left: items[idx].offsetLeft - 24, behavior: 'smooth'});
-}
+
+dots.forEach((dot) => {
+  dot.addEventListener('click', () => scrollToScreenshot(Number(dot.dataset.index)));
+});
+if (prevButton) prevButton.addEventListener('click', () => scrollToScreenshot(Math.max(activeScreenshot - 1, 0)));
+if (nextButton) nextButton.addEventListener('click', () => scrollToScreenshot(Math.min(activeScreenshot + 1, items.length - 1)));
 </script>
 
 </body>

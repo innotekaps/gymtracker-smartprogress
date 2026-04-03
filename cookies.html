@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cookies &amp; Tracking — GymTracker by INNOTEK</title>
-  <meta name="description" content="GymTracker Cookies and Tracking Technologies Policy — how the app stores data and uses technical identifiers.">
+  <title>Cookies &amp; Tracking - GymTracker by INNOTEK</title>
+  <meta name="description" content="GymTracker Cookies and Tracking Technologies Policy - how the app stores data and uses technical identifiers.">
   <link rel="icon" href="./favicon.png">
   <link rel="stylesheet" href="./styles.css">
 </head>
@@ -12,7 +12,7 @@
 
 <div class="scroll-progress"><div class="scroll-progress-bar" id="progressBar"></div></div>
 
-<nav>
+<nav class="site-nav">
   <div class="nav-brand">
     <img src="./icon.png" alt="GymTracker">
     <span>GymTracker</span>
@@ -27,16 +27,15 @@
 
 <div class="legal-hero-enhanced">
   <img class="legal-hero-icon" src="./icon.png" alt="GymTracker">
-  <span class="section-label">🍪 Legal</span>
   <h1>Cookies &amp; Tracking Technologies</h1>
   <p>GymTracker by INNOTEK · Last updated March 5, 2026 · Version 1.1</p>
 </div>
 
 <div class="legal-layout">
 
-  <aside class="toc-sidebar">
+  <aside class="toc-sidebar" id="tocSidebar">
     <div class="toc-header">Contents</div>
-    <nav id="toc-it">
+    <nav id="toc-it" class="toc-nav-pane">
       <ul class="toc-nav">
         <li><a href="#it-s1" class="toc-link">1. Archiviazione Locale</a></li>
         <li><a href="#it-s2" class="toc-link">2. Tracciamento Tecnico</a></li>
@@ -46,7 +45,7 @@
         <li><a href="#it-s6" class="toc-link">6. Contatti</a></li>
       </ul>
     </nav>
-    <nav id="toc-en" style="display:none;">
+    <nav id="toc-en" class="toc-nav-pane" style="display:none;">
       <ul class="toc-nav">
         <li><a href="#en-s1" class="toc-link">1. Local Device Storage</a></li>
         <li><a href="#en-s2" class="toc-link">2. Technical Identifiers</a></li>
@@ -70,14 +69,9 @@
         5 marzo 2026
       </span>
       <span class="legal-meta-badge">Versione 1.1</span>
-      <span class="legal-meta-item">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        ~6 min lettura
-      </span>
-      <span class="legal-meta-item">📱 App nativa iOS</span>
+
     </div>
 
-    <!-- ═══════ ITALIANO ═══════ -->
     <div id="lang-it" class="lang-content active">
 
       <p style="font-size:15px;color:var(--text-secondary);line-height:1.75;margin-bottom:40px;padding-bottom:32px;border-bottom:1px solid var(--separator);">
@@ -163,7 +157,7 @@
         </div>
         <div class="service-row">
           <span class="service-tag">Apple HealthKit</span>
-          <span class="service-desc">Sincronizzazione dati sanitari — esclusivamente locale, solo su consenso esplicito dell'utente. I dati non lasciano mai il dispositivo.</span>
+          <span class="service-desc">Sincronizzazione dati sanitari  -  esclusivamente locale, solo su consenso esplicito dell'utente. I dati non lasciano mai il dispositivo.</span>
         </div>
         <div class="service-row">
           <span class="service-tag">Apple CloudKit</span>
@@ -223,8 +217,8 @@
         </div>
         <p>Per qualsiasi domanda relativa a questa Cookie &amp; Storage Policy o al trattamento dei tuoi dati, puoi contattarci. Le richieste verranno evase entro 30 giorni dalla ricezione.</p>
         <div class="contact-box">
-          <div class="contact-box-title">INNOTEK — GymTracker</div>
-          <div class="contact-box-sub">Innotek · App Store ID: 6759553013</div>
+          <div class="contact-box-title">INNOTEK - GymTracker</div>
+          <div class="contact-box-sub">Risponderemo entro 30 giorni dalla ricezione della tua richiesta</div>
           <div class="contact-box-links">
             <a href="mailto:innotekaps@gmail.com" class="contact-link">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -241,10 +235,7 @@
         Ultimo aggiornamento: 5 marzo 2026 · Versione 1.1<br>
         © 2026 Innotek. Tutti i diritti riservati.
       </div>
-    </div><!-- /lang-it -->
-
-    <!-- ═══════ ENGLISH ═══════ -->
-    <div id="lang-en" class="lang-content">
+    </div><div id="lang-en" class="lang-content">
 
       <p style="font-size:15px;color:var(--text-secondary);line-height:1.75;margin-bottom:40px;padding-bottom:32px;border-bottom:1px solid var(--separator);">
         GymTracker is a native iOS mobile application. Unlike websites, mobile apps do not use cookies in the traditional browser sense. However, we use equivalent storage technologies and technical identifiers to ensure app operation, remember your preferences, and measure service performance. This Policy describes all storage and tracking technologies used, in compliance with applicable regulations and Apple guidelines.
@@ -270,7 +261,7 @@
         <p>This data is accessible only by the GymTracker app and is not shared with other applications installed on the device.</p>
 
         <h3>iOS Keychain (Secure storage)</h3>
-        <p>For sensitive authentication data, we use the iOS Keychain — Apple's secure system storage that provides hardware-level encryption of data even in case of physical device access:</p>
+        <p>For sensitive authentication data, we use the iOS Keychain  -  Apple's secure system storage that provides hardware-level encryption of data even in case of physical device access:</p>
         <ul>
           <li>Firebase authentication tokens (ID Token, Refresh Token)</li>
           <li>Google OAuth credentials</li>
@@ -300,7 +291,7 @@
         <p>RevenueCat uses an anonymous user identifier (App User ID) to link a subscription plan to your account, without collecting personal data. This identifier is generated by the app and cannot be correlated to personal information.</p>
 
         <h3>Device identifier (IDFV)</h3>
-        <p>The app may use the "Identifier for Vendor" (IDFV) provided by iOS — an anonymous identifier specific to the vendor (Innotek) on that device. The IDFV cannot be used to identify you across apps from other vendors and is reset when the app is uninstalled.</p>
+        <p>The app may use the "Identifier for Vendor" (IDFV) provided by iOS  -  an anonymous identifier specific to the vendor (Innotek) on that device. The IDFV cannot be used to identify you across apps from other vendors and is reset when the app is uninstalled.</p>
 
         <div class="info-box">
           <div class="info-box-header">
@@ -329,7 +320,7 @@
         </div>
         <div class="service-row">
           <span class="service-tag">Apple HealthKit</span>
-          <span class="service-desc">Health data synchronization — exclusively local, only with explicit user consent. Data never leaves your device.</span>
+          <span class="service-desc">Health data synchronization  -  exclusively local, only with explicit user consent. Data never leaves your device.</span>
         </div>
         <div class="service-row">
           <span class="service-tag">Apple CloudKit</span>
@@ -389,8 +380,8 @@
         </div>
         <p>For any questions about this Cookies &amp; Storage Policy or data processing, please contact us. Requests will be handled within 30 days of receipt.</p>
         <div class="contact-box">
-          <div class="contact-box-title">INNOTEK — GymTracker</div>
-          <div class="contact-box-sub">Innotek · App Store ID: 6759553013</div>
+          <div class="contact-box-title">INNOTEK - GymTracker</div>
+          <div class="contact-box-sub">We'll respond within 30 days of receiving your request</div>
           <div class="contact-box-links">
             <a href="mailto:innotekaps@gmail.com" class="contact-link">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -407,16 +398,27 @@
         Last updated: March 5, 2026 · Version 1.1<br>
         © 2026 Innotek. All rights reserved.
       </div>
-    </div><!-- /lang-en -->
-
-  </main>
-</div><!-- /legal-layout -->
-
-<footer>
+    </div></main>
+</div><footer>
   <div class="footer-inner">
     <div>
       <div class="footer-brand"><img src="./icon.png" alt="GymTracker"><span>GymTracker</span></div>
-      <p class="footer-desc">Smart fitness tracking for iOS. Built with ❤️ by INNOTEK.</p>
+      <p class="footer-desc">Smart Progress for iPhone by INNOTEK.</p>
+    </div>
+    <div class="footer-col">
+      <h4>App</h4>
+      <ul>
+        <li><a href="https://apps.apple.com/app/id6759553013" target="_blank" rel="noopener">Download on App Store</a></li>
+        <li><a href="./index.html#features">Features</a></li>
+        <li><a href="./index.html#pro">GymTracker Pro</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="mailto:innotekaps@gmail.com">innotekaps@gmail.com</a></li>
+        <li><a href="./index.html#screenshots">Screenshots</a></li>
+      </ul>
     </div>
     <div class="footer-col">
       <h4>Legal</h4>
@@ -425,18 +427,6 @@
         <li><a href="./terms.html">Terms of Service</a></li>
         <li><a href="./cookies.html">Cookies &amp; Tracking</a></li>
       </ul>
-    </div>
-    <div class="footer-col">
-      <h4>App</h4>
-      <ul>
-        <li><a href="https://apps.apple.com/app/id6759553013" target="_blank">Download on App Store</a></li>
-        <li><a href="./index.html#features">Features</a></li>
-        <li><a href="./index.html#pro">GymTracker Pro</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <ul><li><a href="mailto:innotekaps@gmail.com">innotekaps@gmail.com</a></li></ul>
     </div>
   </div>
   <div class="footer-bottom">
