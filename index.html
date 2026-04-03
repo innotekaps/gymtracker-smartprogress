@@ -21,7 +21,6 @@
   </div>
   <div class="nav-links">
     <a href="#features">Features</a>
-    <a href="#how-it-works">How it Works</a>
     <a href="#screenshots">Screenshots</a>
     <a href="#pro">Pro</a>
     <a href="./privacy.html">Privacy</a>
@@ -55,7 +54,7 @@
       <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">Exercises included</div>
     </div>
     <div>
-      <div style="font-size:32px;font-weight:800;background:var(--gradient-accent);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Apple</div>
+      <div style="font-size:32px;font-weight:800;background:var(--gradient-accent);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">✓</div>
       <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">HealthKit integrated</div>
     </div>
     <div>
@@ -63,7 +62,7 @@
       <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">Bilingual app</div>
     </div>
     <div>
-      <div style="font-size:32px;font-weight:800;color:var(--text);">Watch</div>
+      <div style="font-size:32px;font-weight:800;color:var(--text);">⌚</div>
       <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">Apple Watch support</div>
     </div>
   </div>
@@ -158,15 +157,19 @@
         <div class="screenshot-label">Workout</div>
       </div>
       <div class="screenshot-item">
-        <img src="./screenshots/02_history.png" alt="Progress & History">
-        <div class="screenshot-label">History &amp; Stats</div>
+        <img src="./screenshots/02_statistics.png" alt="Statistics">
+        <div class="screenshot-label">Statistics</div>
       </div>
       <div class="screenshot-item">
-        <img src="./screenshots/03_health.png" alt="Health Metrics">
-        <div class="screenshot-label">Health Metrics</div>
+        <img src="./screenshots/03_muscle.png" alt="Muscle Analysis">
+        <div class="screenshot-label">Muscle Analysis</div>
       </div>
       <div class="screenshot-item">
-        <img src="./screenshots/04_profile.png" alt="Profile">
+        <img src="./screenshots/04_health.png" alt="Health Metrics">
+        <div class="screenshot-label">Health</div>
+      </div>
+      <div class="screenshot-item">
+        <img src="./screenshots/05_profile.png" alt="Profile">
         <div class="screenshot-label">Profile</div>
       </div>
     </div>
@@ -175,6 +178,7 @@
       <button class="carousel-dot" onclick="scrollToScreenshot(1)" aria-label="Screenshot 2"></button>
       <button class="carousel-dot" onclick="scrollToScreenshot(2)" aria-label="Screenshot 3"></button>
       <button class="carousel-dot" onclick="scrollToScreenshot(3)" aria-label="Screenshot 4"></button>
+      <button class="carousel-dot" onclick="scrollToScreenshot(4)" aria-label="Screenshot 5"></button>
     </div>
   </div>
 </div>
@@ -203,37 +207,6 @@
 
 <!-- ── Footer ── -->
 <footer>
-
-<script>
-// Fade-in observer for index page
-const fadeObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); fadeObs.unobserve(e.target); } });
-}, {threshold: 0.08});
-document.querySelectorAll('.fade-in').forEach(el => fadeObs.observe(el));
-
-// Screenshot carousel keyboard nav + dots
-const scroll = document.getElementById('screenshotScroll');
-const dots = document.querySelectorAll('.carousel-dot');
-if (scroll) {
-  scroll.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight') scroll.scrollBy({left: 300, behavior: 'smooth'});
-    if (e.key === 'ArrowLeft') scroll.scrollBy({left: -300, behavior: 'smooth'});
-  });
-  scroll.addEventListener('scroll', () => {
-    const items = scroll.querySelectorAll('.screenshot-item');
-    let idx = 0;
-    items.forEach((item, i) => {
-      if (item.offsetLeft <= scroll.scrollLeft + scroll.clientWidth / 2) idx = i;
-    });
-    dots.forEach((d, i) => d.classList.toggle('active', i === idx));
-  }, {passive: true});
-}
-function scrollToScreenshot(idx) {
-  if (!scroll) return;
-  const items = scroll.querySelectorAll('.screenshot-item');
-  if (items[idx]) scroll.scrollTo({left: items[idx].offsetLeft - 24, behavior: 'smooth'});
-}
-</script>
 
   <div class="footer-inner">
     <div>
@@ -274,6 +247,37 @@ function scrollToScreenshot(idx) {
     <p><a href="./privacy.html" style="color:var(--text-muted);">Privacy</a> · <a href="./terms.html" style="color:var(--text-muted);">Terms</a> · <a href="./cookies.html" style="color:var(--text-muted);">Cookies</a></p>
   </div>
 </footer>
+
+<script>
+// Fade-in observer
+const fadeObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); fadeObs.unobserve(e.target); } });
+}, {threshold: 0.08});
+document.querySelectorAll('.fade-in').forEach(el => fadeObs.observe(el));
+
+// Screenshot carousel keyboard nav + dots
+const scroll = document.getElementById('screenshotScroll');
+const dots = document.querySelectorAll('.carousel-dot');
+if (scroll) {
+  scroll.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') scroll.scrollBy({left: 300, behavior: 'smooth'});
+    if (e.key === 'ArrowLeft') scroll.scrollBy({left: -300, behavior: 'smooth'});
+  });
+  scroll.addEventListener('scroll', () => {
+    const items = scroll.querySelectorAll('.screenshot-item');
+    let idx = 0;
+    items.forEach((item, i) => {
+      if (item.offsetLeft <= scroll.scrollLeft + scroll.clientWidth / 2) idx = i;
+    });
+    dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+  }, {passive: true});
+}
+function scrollToScreenshot(idx) {
+  if (!scroll) return;
+  const items = scroll.querySelectorAll('.screenshot-item');
+  if (items[idx]) scroll.scrollTo({left: items[idx].offsetLeft - 24, behavior: 'smooth'});
+}
+</script>
 
 </body>
 </html>
