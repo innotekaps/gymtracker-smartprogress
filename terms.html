@@ -13,34 +13,47 @@
 <div class="scroll-progress"><div class="scroll-progress-bar" id="progressBar"></div></div>
 
 <nav class="site-nav">
-  <div class="nav-brand">
+  <a class="nav-brand" href="./index.html">
     <img src="./icon.png" alt="GymTracker">
     <span>GymTracker</span>
-  </div>
+  </a>
   <div class="nav-links">
-    <a href="./index.html">Home</a>
-    <a href="./privacy.html">Privacy</a>
-    <a href="./cookies.html">Cookies</a>
-    <a href="https://apps.apple.com/app/id6759553013" class="nav-cta" target="_blank">Download</a>
+    <a href="./index.html#features"><span data-lang="en">Features</span><span data-lang="it">Funzionalità</span></a>
+    <a href="./index.html#screenshots">Screenshots</a>
+    <a href="./index.html#pro">Pro</a>
+    <a href="./index.html#contact"><span data-lang="en">Contact</span><span data-lang="it">Contatto</span></a>
+    <div class="lang-switch">
+      <button class="lang-switch-btn" id="btn-lang-en" onclick="switchLang('en')">EN</button>
+      <button class="lang-switch-btn" id="btn-lang-it" onclick="switchLang('it')">IT</button>
+    </div>
+    <a href="https://apps.apple.com/app/id6759553013" class="nav-cta" target="_blank" rel="noopener">
+      <span data-lang="en">Download</span><span data-lang="it">Scarica</span>
+    </a>
   </div>
 </nav>
 
 <div class="legal-hero-enhanced">
   <img class="legal-hero-icon" src="./icon.png" alt="GymTracker">
   <h1>Terms of Service</h1>
-  <p>GymTracker by INNOTEK · Last updated March 5, 2026 · Version 1.1</p>
 </div>
 
 <div class="legal-layout">
 
   <aside class="toc-sidebar" id="tocSidebar">
+    <div class="legal-meta">
+      <span class="legal-meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        5 aprile 2026
+      </span>
+      <span class="legal-meta-badge">v1.2</span>
+    </div>
     <div class="toc-header">Contents</div>
     <nav id="toc-it" class="toc-nav-pane">
       <ul class="toc-nav">
         <li><a href="#it-s1" class="toc-link">1. Descrizione del Servizio</a></li>
         <li><a href="#it-s2" class="toc-link">2. Idoneità</a></li>
         <li><a href="#it-s3" class="toc-link">3. Account e Accesso</a></li>
-        <li><a href="#it-s4" class="toc-link">4. Abbonamenti e Pagamenti</a></li>
+        <li><a href="#it-s4" class="toc-link">4. Acquisto Pro</a></li>
         <li><a href="#it-s5" class="toc-link">5. Avvertenza Medica</a></li>
         <li><a href="#it-s6" class="toc-link">6. Proprietà Intellettuale</a></li>
         <li><a href="#it-s7" class="toc-link">7. Dati e Contenuti Utente</a></li>
@@ -56,7 +69,7 @@
         <li><a href="#en-s1" class="toc-link">1. Service Description</a></li>
         <li><a href="#en-s2" class="toc-link">2. Eligibility</a></li>
         <li><a href="#en-s3" class="toc-link">3. Accounts and Access</a></li>
-        <li><a href="#en-s4" class="toc-link">4. Subscriptions &amp; Billing</a></li>
+        <li><a href="#en-s4" class="toc-link">4. Pro Purchase</a></li>
         <li><a href="#en-s5" class="toc-link">5. Medical Disclaimer</a></li>
         <li><a href="#en-s6" class="toc-link">6. Intellectual Property</a></li>
         <li><a href="#en-s7" class="toc-link">7. User Data &amp; Content</a></li>
@@ -70,20 +83,6 @@
   </aside>
 
   <main class="legal-content">
-    <div class="lang-tabs">
-      <button class="lang-tab active" onclick="switchLang('it')" id="tab-it">Italiano</button>
-      <button class="lang-tab" onclick="switchLang('en')" id="tab-en">English</button>
-    </div>
-
-    <div class="legal-meta">
-      <span class="legal-meta-item">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        5 marzo 2026
-      </span>
-      <span class="legal-meta-badge">Versione 1.1</span>
-
-    </div>
-
     <div id="lang-it" class="lang-content active">
 
       <p style="font-size:15px;color:var(--text-secondary);line-height:1.75;margin-bottom:40px;padding-bottom:32px;border-bottom:1px solid var(--separator);">
@@ -131,16 +130,10 @@
       <div class="legal-section fade-in">
         <div class="legal-section-header">
           <span class="section-number">04</span>
-          <h2>Abbonamenti e Pagamenti</h2>
+          <h2>Acquisto Pro</h2>
         </div>
-        <p>Gli abbonamenti GymTracker Pro sono gestiti tramite Apple In-App Purchases e possono rinnovarsi automaticamente salvo disdetta dalle impostazioni di abbonamento Apple.</p>
-        <div class="premium-box">
-          <div class="premium-box-header">
-            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>
-            <span class="premium-box-title">Trial gratuito</span>
-          </div>
-          <p>Se previsto, il trial si converte in abbonamento a pagamento salvo disdetta prima del rinnovo. La disdetta deve essere effettuata dalle Impostazioni di Apple almeno 24 ore prima della scadenza del periodo di prova.</p>
-        </div>
+        <p>GymTracker Pro è disponibile come <strong>acquisto unico</strong> tramite Apple In-App Purchase. Una volta acquistato, l'accesso alle funzionalità Pro è permanente, senza rinnovi automatici o canoni ricorrenti.</p>
+        <p>I rimborsi sono gestiti direttamente da Apple secondo le politiche dell'App Store. Per richieste di rimborso, visita <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>.</p>
       </div>
 
       <span class="legal-section-anchor" id="it-s5"></span>
@@ -242,10 +235,6 @@
           </div>
         </div>
       </div>
-
-      <div class="legal-footer-note">
-        Ultimo aggiornamento: 5 marzo 2026 · Versione 1.1
-      </div>
     </div><div id="lang-en" class="lang-content">
 
       <p style="font-size:15px;color:var(--text-secondary);line-height:1.75;margin-bottom:40px;padding-bottom:32px;border-bottom:1px solid var(--separator);">
@@ -293,16 +282,10 @@
       <div class="legal-section fade-in">
         <div class="legal-section-header">
           <span class="section-number">04</span>
-          <h2>Subscriptions and Billing</h2>
+          <h2>Pro Purchase</h2>
         </div>
-        <p>GymTracker Pro subscriptions are billed via Apple In-App Purchases and may auto-renew unless canceled in Apple subscription settings.</p>
-        <div class="premium-box">
-          <div class="premium-box-header">
-            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>
-            <span class="premium-box-title">Free trial</span>
-          </div>
-          <p>If available, free trials convert into paid subscriptions unless canceled before renewal. Cancellation must be made through Apple Settings at least 24 hours before the trial period ends.</p>
-        </div>
+        <p>GymTracker Pro is available as a <strong>one-time purchase</strong> via Apple In-App Purchase. Once purchased, access to Pro features is permanent with no auto-renewals or recurring fees.</p>
+        <p>Refunds are handled by Apple according to App Store policies. To request a refund, visit <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>.</p>
       </div>
 
       <span class="legal-section-anchor" id="en-s5"></span>
@@ -412,35 +395,32 @@
 </div><footer>
   <div class="footer-inner">
     <div>
-      <div class="footer-brand"><img src="./icon.png" alt="GymTracker"><span>GymTracker</span></div>
-      <p class="footer-desc">GymTracker - Smart Progress by INNOTEK.</p>
+      <div class="footer-brand">
+        <img src="./icon.png" alt="GymTracker">
+        <span>GymTracker</span>
+      </div>
+      <p class="footer-desc">GymTracker — Smart Progress by INNOTEK.</p>
     </div>
     <div class="footer-col">
       <h4>App</h4>
       <ul>
-        <li><a href="https://apps.apple.com/app/id6759553013" target="_blank" rel="noopener">Download on App Store</a></li>
-        <li><a href="./index.html#features">Features</a></li>
-        <li><a href="./index.html#pro">GymTracker Pro</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Support</h4>
-      <ul>
-        <li><a href="mailto:innotekaps@gmail.com">innotekaps@gmail.com</a></li>
+        <li><a href="./index.html#features"><span data-lang="en">Features</span><span data-lang="it">Funzionalità</span></a></li>
         <li><a href="./index.html#screenshots">Screenshots</a></li>
+        <li><a href="./index.html#pro">Pro</a></li>
+        <li><a href="https://apps.apple.com/app/id6759553013" target="_blank" rel="noopener">App Store ↗</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Legal</h4>
+      <h4><span data-lang="en">Legal</span><span data-lang="it">Legale</span></h4>
       <ul>
         <li><a href="./privacy.html">Privacy Policy</a></li>
-        <li><a href="./terms.html">Terms of Service</a></li>
-        <li><a href="./cookies.html">Cookies &amp; Tracking</a></li>
+        <li><a href="./terms.html"><span data-lang="en">Terms of Service</span><span data-lang="it">Termini di Servizio</span></a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 INNOTEK. All rights reserved.</p>
+    <p>© 2026 INNOTEK. <span data-lang="en">All rights reserved.</span><span data-lang="it">Tutti i diritti riservati.</span></p>
+    <p><a href="./privacy.html" style="color:var(--text-muted);">Privacy</a> · <a href="./terms.html" style="color:var(--text-muted);"><span data-lang="en">Terms</span><span data-lang="it">Termini</span></a></p>
   </div>
 </footer>
 
@@ -449,10 +429,11 @@
 <script>
   const savedLang = localStorage.getItem('gymtracker-lang') || 'it';
   function switchLang(lang) {
+    document.documentElement.className = 'lang-' + lang;
     document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
     document.getElementById('lang-' + lang).classList.add('active');
-    document.getElementById('tab-' + lang).classList.add('active');
+    document.getElementById('btn-lang-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-lang-it').classList.toggle('active', lang === 'it');
     document.getElementById('toc-it').style.display = lang === 'it' ? '' : 'none';
     document.getElementById('toc-en').style.display = lang === 'en' ? '' : 'none';
     localStorage.setItem('gymtracker-lang', lang);

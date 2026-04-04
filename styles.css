@@ -275,7 +275,8 @@ section:not(.hero) { padding: 100px 24px; max-width: 1100px; margin: 0 auto; scr
 
 /* ── Screenshots ── */
 .screenshots-section { background: linear-gradient(180deg, var(--bg) 0%, #0f0520 50%, var(--bg) 100%); }
-.screenshots-section > div { max-width: 1240px; margin: 0 auto; padding: 100px 24px; }
+.screenshots-header { max-width: 1100px; margin: 0 auto; padding: 100px 24px 56px; }
+.screenshots-carousel { max-width: 1240px; margin: 0 auto; padding: 0 24px 100px; }
 .screenshots-shell {
   position: relative;
   display: flex;
@@ -335,10 +336,21 @@ section:not(.hero) { padding: 100px 24px; max-width: 1100px; margin: 0 auto; scr
   font-size: 13px; color: var(--text-muted); font-weight: 500;
 }
 
+/* ── Contact Section ── */
+.contact-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--separator);
+  border-radius: var(--radius-xl);
+  padding: 64px 48px;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
 /* ── Pro Section ── */
 .pro-card {
-  background: linear-gradient(135deg, rgba(191,90,242,0.15), rgba(139,44,222,0.1));
-  border: 1px solid rgba(191,90,242,0.3);
+  background: linear-gradient(160deg, rgba(191,90,242,0.18) 0%, rgba(10,132,255,0.08) 100%);
+  border: 1px solid rgba(191,90,242,0.35);
   border-radius: var(--radius-xl);
   padding: 64px 48px;
   text-align: center;
@@ -346,9 +358,33 @@ section:not(.hero) { padding: 100px 24px; max-width: 1100px; margin: 0 auto; scr
 }
 .pro-card::before {
   content: '';
-  position: absolute; top: -100px; right: -100px;
-  width: 400px; height: 400px;
-  background: radial-gradient(circle, rgba(191,90,242,0.1) 0%, transparent 70%);
+  position: absolute; top: -120px; right: -120px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(191,90,242,0.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+.pro-top { margin-bottom: 40px; }
+.pro-price-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  padding: 14px 28px;
+  margin-top: 24px;
+}
+.pro-price-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--premium);
+}
+.pro-price-sub {
+  font-size: 14px;
+  color: var(--text-muted);
 }
 .pro-list {
   list-style: none;
@@ -431,7 +467,10 @@ footer {
 }
 .footer-inner {
   max-width: 1100px; margin: 0 auto;
-  display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 40px 80px;
+  align-items: flex-start;
 }
 .footer-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
 .footer-brand img { width: 36px; height: 36px; border-radius: 9px; }
@@ -458,7 +497,7 @@ footer {
   .screenshot-item img { height: 440px; }
   .stats-inner { gap: 24px; }
   .stat-value { font-size: 24px; }
-  .footer-inner { flex-direction: column; gap: 28px; }
+  .footer-inner { grid-template-columns: 1fr; gap: 28px; }
   .screenshots-shell { gap: 8px; }
   .carousel-button { display: none; }
 }
@@ -562,22 +601,22 @@ footer {
 
 /* ── Legal Meta Bar ── */
 .legal-meta {
-  display: flex; flex-wrap: wrap; gap: 16px; align-items: center;
-  padding: 14px 20px; border-radius: var(--radius-md);
-  background: var(--bg-card); border: 1px solid var(--separator);
-  margin-bottom: 32px;
+  display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--separator);
 }
 .legal-meta-item {
   display: flex; align-items: center; gap: 6px;
-  font-size: 13px; color: var(--text-muted);
+  font-size: 12px; color: var(--text-muted);
 }
-.legal-meta-item svg { opacity: 0.6; }
+.legal-meta-item svg { opacity: 0.5; }
 .legal-meta-badge {
-  background: rgba(191,90,242,0.15);
-  border: 1px solid rgba(191,90,242,0.25);
+  background: rgba(191,90,242,0.12);
+  border: 1px solid rgba(191,90,242,0.2);
   color: var(--premium);
-  padding: 3px 10px; border-radius: 12px;
-  font-size: 11px; font-weight: 700; letter-spacing: 0.3px;
+  padding: 2px 8px; border-radius: 10px;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.3px;
 }
 
 /* ── Section Anchors & Headers ── */
