@@ -349,7 +349,7 @@ section:not(.hero) { padding: 100px 24px; max-width: 1100px; margin: 0 auto; scr
   grid-auto-flow: column;
   grid-auto-columns: minmax(240px, 320px);
   gap: 20px; overflow-x: auto; overflow-y: hidden;
-  padding: 20px 8px 20px;
+  padding: 20px 8px 8px;
   scrollbar-width: thin; scrollbar-color: var(--separator) transparent;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
@@ -899,7 +899,9 @@ html[data-theme="light"] .footer-appstore-badge:hover {
   transition: transform .2s, box-shadow .2s, bottom .3s, right .3s, filter .2s;
   font-weight: 500;
   padding: 0;
-  line-height: 1;
+  line-height: 1.2;
+  min-height: 56px;
+  min-width: 56px;
 }
 .theme-toggle:hover { transform: scale(1.12); box-shadow: 0 8px 32px rgba(191,90,242,0.6); }
 .theme-toggle:active { transform: scale(0.92); }
