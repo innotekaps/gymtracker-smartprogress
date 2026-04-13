@@ -2,9 +2,10 @@
 
 /* ===================================
   GymTracker - Design System
-   Mirroring the app's theme
+   Automatic Dark/Light Theme
 =================================== */
-:root {
+:root,
+html[data-theme="dark"] {
   --bg:             #0A0A0C;
   --bg-card:        #1C1C1E;
   --bg-elevated:    #2C2C2E;
@@ -32,9 +33,53 @@
   --shadow-glow: 0 0 40px rgba(191,90,242,0.25);
 }
 
+/* Light Mode Theme */
+html[data-theme="light"] {
+  --bg:             #FFFFFF;
+  --bg-card:        #F5F5F7;
+  --bg-elevated:    #EBEBF0;
+  --text:           #1C1C1E;
+  --text-secondary: rgba(28,28,30,0.72);
+  --text-muted:     #79869C;
+  --accent:         #0A84FF;
+  --success:        #34C759;
+  --error:          #FF3B30;
+  --warning:        #FF9500;
+  --premium:        #9D4EDD;
+  --premium2:       #7209B7;
+  --separator:      rgba(0,0,0,0.08);
+
+  --gradient-premium: linear-gradient(135deg, #9D4EDD 0%, #7209B7 100%);
+  --gradient-accent:  linear-gradient(135deg, #0A84FF 0%, #3C3AA1 100%);
+  --gradient-hero:    linear-gradient(160deg, #FFFFFF 0%, #F5F3FF 60%, #E8E3FF 100%);
+}
+
+/* System preference fallback */
+@media (prefers-color-scheme: light) {
+  html:not([data-theme]) {
+    --bg:             #FFFFFF;
+    --bg-card:        #F5F5F7;
+    --bg-elevated:    #EBEBF0;
+    --text:           #1C1C1E;
+    --text-secondary: rgba(28,28,30,0.72);
+    --text-muted:     #79869C;
+    --accent:         #0A84FF;
+    --success:        #34C759;
+    --error:          #FF3B30;
+    --warning:        #FF9500;
+    --premium:        #9D4EDD;
+    --premium2:       #7209B7;
+    --separator:      rgba(0,0,0,0.08);
+
+    --gradient-premium: linear-gradient(135deg, #9D4EDD 0%, #7209B7 100%);
+    --gradient-accent:  linear-gradient(135deg, #0A84FF 0%, #3C3AA1 100%);
+    --gradient-hero:    linear-gradient(160deg, #FFFFFF 0%, #F5F3FF 60%, #E8E3FF 100%);
+  }
+}
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; color-scheme: light dark; }
 
 body {
   background: var(--bg);
@@ -810,21 +855,58 @@ footer {
   font-size: 13px; color: var(--text-muted); line-height: 1.6;
 }
 
-/* ── Back to Top ── */
-.back-to-top {
-  position: fixed; bottom: 32px; right: 28px; z-index: 50;
-  width: 44px; height: 44px; border-radius: 50%;
+/* ── Theme Toggle ── */
+.theme-toggle {
+  position: fixed; bottom: 24px; right: 20px; z-index: 9999;
+  width: 56px; height: 56px; border-radius: 50%;
   background: var(--gradient-premium);
   border: none; cursor: pointer;
   display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 4px 20px rgba(191,90,242,0.4);
+  box-shadow: 0 4px 24px rgba(191,90,242,0.4);
+  color: #fff; font-size: 24px;
+  transition: transform .2s, box-shadow .2s, bottom .3s, right .3s;
+  font-weight: 500;
+  padding: 0;
+}
+.theme-toggle:hover { transform: scale(1.12); box-shadow: 0 8px 32px rgba(191,90,242,0.6); }
+.theme-toggle:active { transform: scale(0.92); }
+.theme-toggle:focus-visible { outline: 2px solid rgba(255,255,255,0.5); outline-offset: 2px; }
+
+/* ── Back to Top ── */
+.back-to-top {
+  position: fixed; bottom: 92px; right: 20px; z-index: 9998;
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--gradient-accent);
+  border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 24px rgba(10,132,255,0.3);
   opacity: 0; pointer-events: none;
   transform: translateY(12px);
-  transition: opacity .3s, transform .3s;
-  color: #fff; font-size: 18px;
+  transition: opacity .3s, transform .3s, visibility .3s;
+  color: #fff; font-size: 20px;
+  visibility: hidden;
 }
-.back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
-.back-to-top:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(191,90,242,0.5); }
+.back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); visibility: visible; }
+.back-to-top:hover { transform: translateY(-2px); box-shadow: 0 6px 32px rgba(10,132,255,0.5); }
+.back-to-top:focus-visible { outline: 2px solid rgba(255,255,255,0.5); outline-offset: 2px; }
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .theme-toggle {
+    width: 52px; height: 52px;
+    bottom: 16px; right: 16px;
+    font-size: 22px;
+    box-shadow: 0 2px 16px rgba(191,90,242,0.35);
+  }
+  .theme-toggle:hover { box-shadow: 0 4px 20px rgba(191,90,242,0.5); }
+  
+  .back-to-top {
+    width: 52px; height: 52px;
+    bottom: 76px; right: 16px;
+    font-size: 18px;
+    box-shadow: 0 2px 16px rgba(10,132,255,0.25);
+  }
+}
 
 /* ── Fade-in animation ── */
 .fade-in { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }

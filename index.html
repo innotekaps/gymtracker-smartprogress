@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="lang-en">
+<html lang="en" class="lang-en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -448,6 +448,7 @@ dots.forEach((dot) => {
 if (prevButton) prevButton.addEventListener('click', () => scrollToScreenshot(Math.max(activeScreenshot - 1, 0)));
 if (nextButton) nextButton.addEventListener('click', () => scrollToScreenshot(Math.min(activeScreenshot + 1, getActiveItems().length - 1)));
 </script>
+<script src="./theme-toggle.js" defer><\/script>
 
 </body>
 </html>
