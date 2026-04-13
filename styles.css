@@ -350,7 +350,7 @@ section:not(.hero) { padding: 100px 24px; max-width: 1100px; margin: 0 auto; scr
   grid-auto-columns: minmax(240px, 320px);
   gap: 20px; overflow-x: auto; overflow-y: hidden;
   padding: 20px 8px 8px;
-  scrollbar-width: thin; scrollbar-color: var(--separator) transparent;
+  scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
   scroll-padding-inline: 8px;
@@ -358,9 +358,7 @@ section:not(.hero) { padding: 100px 24px; max-width: 1100px; margin: 0 auto; scr
   width: 100%;
   flex: 1 1 auto;
 }
-.screenshots-scroll::-webkit-scrollbar { height: 4px; }
-.screenshots-scroll::-webkit-scrollbar-track { background: transparent; }
-.screenshots-scroll::-webkit-scrollbar-thumb { background: var(--separator); border-radius: 4px; transition: background 0.3s ease; }
+.screenshots-scroll::-webkit-scrollbar { display: none; }
 .screenshot-item {
   min-width: 0; scroll-snap-align: center;
 }
@@ -895,11 +893,11 @@ html[data-theme="light"] .footer-appstore-badge:hover {
   border: none; cursor: pointer;
   display: flex; align-items: center; justify-content: center;
   box-shadow: 0 4px 24px rgba(191,90,242,0.4);
-  color: #fff; font-size: 24px;
+  color: #fff; font-size: 18px;
   transition: transform .2s, box-shadow .2s, bottom .3s, right .3s, filter .2s;
   font-weight: 500;
   padding: 0;
-  line-height: 1.2;
+  line-height: 1;
   min-height: 56px;
   min-width: 56px;
 }
