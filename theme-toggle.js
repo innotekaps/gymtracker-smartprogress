@@ -116,9 +116,6 @@ class ThemeManager {
     btn.className = 'theme-toggle';
     btn.setAttribute('aria-label', 'Toggle dark/light mode');
     btn.setAttribute('type', 'button');
-    
-    const currentTheme = document.documentElement.getAttribute('data-theme') || THEME_DARK;
-    this.updateToggleIcon(currentTheme);
 
     btn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -126,7 +123,10 @@ class ThemeManager {
     });
 
     document.body.appendChild(btn);
-    console.log('✓ Theme toggle button created');
+
+    // Set icon after the button is in the DOM.
+    const currentTheme = document.documentElement.getAttribute('data-theme') || THEME_DARK;
+    this.updateToggleIcon(currentTheme);
   }
 
   /**
@@ -162,11 +162,9 @@ class ThemeManager {
 // Initialize theme manager when DOM is ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
-    console.log('🌙 DOMContentLoaded: Initializing ThemeManager...');
     new ThemeManager();
   });
 } else {
-  console.log('🌙 Document already loaded: Initializing ThemeManager...');
   new ThemeManager();
 }
 
@@ -174,7 +172,6 @@ if (document.readyState === 'loading') {
 if (document.readyState === 'complete') {
   setTimeout(() => {
     if (!document.getElementById('themeToggle')) {
-      console.log('🌙 Fallback: Creating theme toggle...');
       new ThemeManager();
     }
   }, 500);
