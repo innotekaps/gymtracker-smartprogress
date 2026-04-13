@@ -105,10 +105,17 @@ class ThemeManager {
       return;
     }
 
+    // Fallback if body doesn't exist yet
+    if (!document.body) {
+      setTimeout(() => this.createToggleButton(), 100);
+      return;
+    }
+
     const btn = document.createElement('button');
     btn.id = 'themeToggle';
     btn.className = 'theme-toggle';
     btn.setAttribute('aria-label', 'Toggle dark/light mode');
+    btn.setAttribute('type', 'button');
     
     const currentTheme = document.documentElement.getAttribute('data-theme') || THEME_DARK;
     this.updateToggleIcon(currentTheme);
@@ -119,6 +126,7 @@ class ThemeManager {
     });
 
     document.body.appendChild(btn);
+    console.log('✓ Theme toggle button created');
   }
 
   /**
@@ -154,8 +162,20 @@ class ThemeManager {
 // Initialize theme manager when DOM is ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
+    console.log('🌙 DOMContentLoaded: Initializing ThemeManager...');
     new ThemeManager();
   });
 } else {
+  console.log('🌙 Document already loaded: Initializing ThemeManager...');
   new ThemeManager();
+}
+
+// Fallback initialization in case of issues
+if (document.readyState === 'complete') {
+  setTimeout(() => {
+    if (!document.getElementById('themeToggle')) {
+      console.log('🌙 Fallback: Creating theme toggle...');
+      new ThemeManager();
+    }
+  }, 500);
 }
