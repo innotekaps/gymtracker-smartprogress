@@ -888,22 +888,32 @@ html[data-theme="light"] .footer-appstore-badge:hover {
 /* ── Theme Toggle ── */
 .theme-toggle {
   position: fixed; bottom: 24px; right: 20px; z-index: 9999;
-  width: 56px; height: 56px; border-radius: 50%;
+  width: 46px; height: 46px; border-radius: 50%;
   background: var(--gradient-premium);
   border: none; cursor: pointer;
   display: flex; align-items: center; justify-content: center;
   box-shadow: 0 4px 24px rgba(191,90,242,0.4);
-  color: #fff; font-size: 18px;
+  color: #fff;
   transition: transform .2s, box-shadow .2s, bottom .3s, right .3s, filter .2s;
-  font-weight: 500;
   padding: 0;
-  line-height: 1;
-  min-height: 56px;
-  min-width: 56px;
+  line-height: 0;
+  min-height: 46px;
+  min-width: 46px;
 }
 .theme-toggle:hover { transform: scale(1.12); box-shadow: 0 8px 32px rgba(191,90,242,0.6); }
 .theme-toggle:active { transform: scale(0.92); }
 .theme-toggle:focus-visible { outline: 2px solid rgba(255,255,255,0.5); outline-offset: 2px; }
+
+.theme-toggle-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 
 /* Light mode theme toggle - ensure icon visibility */
 html[data-theme="light"] .theme-toggle {
@@ -931,11 +941,13 @@ html[data-theme="light"] .theme-toggle {
 /* Mobile responsive */
 @media (max-width: 480px) {
   .theme-toggle {
-    width: 52px; height: 52px;
+    width: 40px; height: 40px;
     bottom: 16px; right: 16px;
-    font-size: 22px;
+    min-height: 40px;
+    min-width: 40px;
     box-shadow: 0 2px 16px rgba(191,90,242,0.35);
   }
+  .theme-toggle-icon { width: 16px; height: 16px; }
   .theme-toggle:hover { box-shadow: 0 4px 20px rgba(191,90,242,0.5); }
   
   .back-to-top {
