@@ -203,6 +203,13 @@ html[data-theme="light"] .lang-switch-btn.active { background: rgba(0,0,0,0.12);
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* Light mode hero title - solid black */
+html[data-theme="light"] .hero h1 {
+  background: none;
+  -webkit-text-fill-color: unset;
+  color: #1C1C1E;
+}
 .hero-tagline {
   font-size: clamp(17px, 2.8vw, 24px);
   font-weight: 700;
@@ -355,7 +362,7 @@ section:not(.hero) { padding: 100px 24px; max-width: 1100px; margin: 0 auto; scr
 }
 .screenshots-scroll::-webkit-scrollbar { height: 4px; }
 .screenshots-scroll::-webkit-scrollbar-track { background: transparent; }
-.screenshots-scroll::-webkit-scrollbar-thumb { background: var(--separator); border-radius: 2px; }
+.screenshots-scroll::-webkit-scrollbar-thumb { background: var(--separator); border-radius: 4px; transition: background 0.3s ease; }
 .screenshot-item {
   min-width: 0; scroll-snap-align: center;
 }
@@ -891,13 +898,19 @@ html[data-theme="light"] .footer-appstore-badge:hover {
   display: flex; align-items: center; justify-content: center;
   box-shadow: 0 4px 24px rgba(191,90,242,0.4);
   color: #fff; font-size: 24px;
-  transition: transform .2s, box-shadow .2s, bottom .3s, right .3s;
+  transition: transform .2s, box-shadow .2s, bottom .3s, right .3s, filter .2s;
   font-weight: 500;
   padding: 0;
+  line-height: 1;
 }
 .theme-toggle:hover { transform: scale(1.12); box-shadow: 0 8px 32px rgba(191,90,242,0.6); }
 .theme-toggle:active { transform: scale(0.92); }
 .theme-toggle:focus-visible { outline: 2px solid rgba(255,255,255,0.5); outline-offset: 2px; }
+
+/* Light mode theme toggle - ensure icon visibility */
+html[data-theme="light"] .theme-toggle {
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
 
 /* ── Back to Top ── */
 .back-to-top {
