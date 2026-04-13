@@ -114,6 +114,12 @@ a:hover { opacity: 0.8; }
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid var(--separator);
 }
+
+/* Light mode nav */
+html[data-theme="light"] .site-nav {
+  background: rgba(255,255,255,0.85);
+}
+
 .nav-brand { display: flex; align-items: center; gap: 10px; color: inherit; text-decoration: none; }
 .nav-brand img { width: 32px; height: 32px; border-radius: 8px; }
 .nav-brand span { font-size: 17px; font-weight: 700; letter-spacing: -0.3px; }
@@ -148,6 +154,9 @@ html.lang-it [data-lang="en"] { display: none; }
   font-family: 'Manrope', sans-serif; letter-spacing: 0.3px;
 }
 .lang-switch-btn.active { background: rgba(255,255,255,0.12); color: var(--text); }
+
+/* Light mode language switch */
+html[data-theme="light"] .lang-switch-btn.active { background: rgba(0,0,0,0.12); }
 
 /* ── Hero ── */
 .hero {
@@ -545,6 +554,12 @@ footer {
   padding: 48px 24px;
   background: #0A0A0C;
 }
+
+/* Light mode footer */
+html[data-theme="light"] footer {
+  background: #F8F8FA;
+}
+
 .footer-inner {
   max-width: 1100px; margin: 0 auto;
   display: grid;
@@ -564,7 +579,19 @@ footer {
   border-radius: 12px; color: var(--text-primary); text-decoration: none;
   font-size: 14px; font-weight: 600; line-height: 1.3; transition: background 0.2s;
 }
+
+/* Light mode footer badge */
+html[data-theme="light"] .footer-appstore-badge {
+  background: rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.1);
+  color: var(--text);
+}
+
 .footer-appstore-badge:hover { background: rgba(255,255,255,0.15); }
+
+html[data-theme="light"] .footer-appstore-badge:hover {
+  background: rgba(0,0,0,0.12);
+}
+
 .footer-appstore-badge small {
   display: block; font-size: 10px; color: var(--text-muted);
   font-weight: 400; text-transform: uppercase; letter-spacing: 0.6px;
