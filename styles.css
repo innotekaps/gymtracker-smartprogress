@@ -348,8 +348,8 @@ section:not(.hero) { padding: 100px 24px; max-width: 1100px; margin: 0 auto; scr
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: minmax(240px, 320px);
-  gap: 20px; overflow-x: auto;
-  padding: 20px 8px 40px;
+  gap: 20px; overflow-x: auto; overflow-y: hidden;
+  padding: 20px 8px 20px;
   scrollbar-width: thin; scrollbar-color: var(--separator) transparent;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
@@ -357,8 +357,6 @@ section:not(.hero) { padding: 100px 24px; max-width: 1100px; margin: 0 auto; scr
   overscroll-behavior-x: contain;
   width: 100%;
   flex: 1 1 auto;
-  overscroll-behavior-x: contain;
-  width: 100%;
 }
 .screenshots-scroll::-webkit-scrollbar { height: 4px; }
 .screenshots-scroll::-webkit-scrollbar-track { background: transparent; }
